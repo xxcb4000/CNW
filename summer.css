@@ -1,0 +1,416 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    color: white;
+    scroll-behavior: smooth;  
+    background-image: url("summerbackground.jpg"); /* Remplace par le chemin de ton image */
+    background-size: cover; /* L'image couvre toute la zone */
+    background-attachment: fixed /* Centre l'image */
+    /* background-repeat: repeat-y; */
+    /* background-position: center; */
+}
+
+
+/* Header Section */
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+a {
+    text-decoration:none;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: white;
+    /*text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);*/
+    z-index: 2;
+}
+
+.welcome-text h1 {
+    font-size: 4rem;
+}
+
+.welcome-text p {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.heart {
+    width: 1.2em; /* Taille ajustée à celle du texte */
+    height: auto; /* Conserve les proportions de l'image */
+    vertical-align: -0.3em; /* Aligne le cœur avec le texte */
+    margin-left: -0.1em; /* Ajoute un petit espace entre "Wallonie" et le cœur */
+}
+
+/* Navbar Section */
+.navbar {
+    position: fixed; /* Fixé en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(110, 144, 147, 0.8);
+    color: white;
+    padding: 10px 65px 10px 65px; /* Moins de padding pour plus de compacité */
+    display: flex; /* Flexbox pour aligner logo et menu */
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: space-between; /* Sépare logo et liens */
+    z-index: 10;
+    opacity: 0; /* Invisible au départ */
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.logo {
+    height: 60px; /* Ajuste la taille du logo */
+    width: auto;
+}
+
+.navbar.visible {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Revient à sa position normale */
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Aligne les liens à droite */
+    gap: 20px; /* Espacement entre les liens */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+/* Sticky effect */
+body:has(main:target) .navbar {
+    top: 0;
+}
+
+
+.walks {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 50px 50px 0;
+    place-items: center;
+
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond légère */
+    border: 1px solid #ccc; /* Bordure subtile */
+    border-radius: 40px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    padding: 20px;
+    color: #000000; /* Assure que le texte est lisible */
+    line-height: 1.6;
+    text-align: center;
+    height: 350px; /* Hauteur fixe pour les carrés */
+    aspect-ratio: 1/1;
+}
+section:hover {
+    transform: scale(1.05); /* Agrandit légèrement le carré */
+    transition: transform 0.3s ease;
+}
+
+.level {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 50px 0;
+    color: #ffffff; /* Texte blanc pour contraster */
+    font-size: 1.5rem; /* Taille légèrement plus grande */
+    font-weight:normal ; /* Rendre le texte plus prononcé */
+    text-align: center;
+    letter-spacing: 2px; /* Espacement entre les lettres pour un effet moderne */
+    text-transform: lowercase; /* Met tout en majuscules pour un style épuré */
+}
+
+
+.hard {
+    background-image: url("summerhard.jpg"); /* Remplace par le chemin de ton image */
+    background-size: cover; /* L'image couvre toute la zone */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+}
+
+.intermediate {
+    background-image: url("summerintermediate.jpg"); /* Remplace par le chemin de ton image */
+    background-size: cover; /* L'image couvre toute la zone */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+}
+
+.easy {
+    background-image: url("summereasy.jpg"); /* Remplace par le chemin de ton image */
+    background-size: cover; /* L'image couvre toute la zone */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+}
+
+.textLiege {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 50px;
+    place-items: center;
+    color: #ffffff; /* Texte gris foncé */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align:justify;
+}
+.mapLiege {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: flex-start; /* Centre verticalement */
+    width: 100%; /* Utilise toute la largeur disponible */
+    margin: 0 auto; /* Centre la carte dans son parent */
+    height: auto; /* Conserve les proportions */
+    padding: 30px 150px 0;
+
+}
+
+.texte {
+    color: white ;
+    padding: 60px 120px;
+    font-size:25px;
+}
+
+.fall {
+    height:4rem;
+}
+
+.winter {
+    height:4rem;
+}
+
+.summer {
+    height:4rem;
+}
+
+.spring {
+    height:4rem;
+}
+
+.stitre {
+    color: white ;
+    padding: 60px 120px 0;
+    font-size:35px;
+}
+
+
+.cadrecalendrier {
+    display: grid ;
+    grid-template-columns: 2fr 3fr 2fr;
+    gap: 0px;
+    padding: 0 0 0px;
+    align-items:center;
+    margin: 0 0 200px;
+
+
+}
+
+.month {
+    font-size: 50px;
+    text-align:right;
+    padding: 0 30px;
+
+
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 colonnes pour les jours de la semaine */
+    grid-gap: 1px; /* Espacement entre les cellules */
+    max-width: 600px; /* Largeur maximale du calendrier */
+    margin: 0px; /* Centre horizontalement */
+    background-color: transparent; /* Fond de la grille */
+
+
+
+  }
+
+  .goingright {
+    padding:0 0 0 30px;
+  }
+
+
+  /* Style des cellules */
+  .day {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; /* Hauteur des cellules */
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+  }
+
+    /* En-têtes pour les jours de la semaine */
+    .day-header {
+        background-color: transparent; /* Couleur de l'en-tête */
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+  .dayeventeasy {
+    background-color: rgb(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; /* Hauteur des cellules */
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .dayeventeasy::after {
+    content: "\1F7E2"; /* Ajoute un élément vide pour la pastille */
+    position: absolute;
+    top: 5px; /* Distance du haut */
+    right: 5px; /* Distance de la droite */
+    font-size: 10px;
+    z-index: 3; /* S'assure que la pastille est au-dessus du contenu */
+}
+.dayeventintermediate {
+    background-color: rgb(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; /* Hauteur des cellules */
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    position: relative;
+  }
+
+  .dayeventintermediate::after {
+    content: "\1F7E0"; /* Ajoute un élément vide pour la pastille */
+    position: absolute;
+    top: 5px; /* Distance du haut */
+    right: 5px; /* Distance de la droite */
+
+    font-size: 10px;
+    z-index: 3; /* S'assure que la pastille est au-dessus du contenu */
+}
+.dayeventhard {
+    background-color: rgb(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; /* Hauteur des cellules */
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    position: relative;
+  }
+
+  .dayeventhard::after {
+    content: "\1F534"; /* Ajoute un élément vide pour la pastille */
+    position: absolute;
+    top: 5px; /* Distance du haut */
+    right: 5px; /* Distance de la droite */
+    font-size: 10px;
+    z-index: 3; /* S'assure que la pastille est au-dessus du contenu */
+}
+
+
+
+footer {
+    background: rgba(110, 144, 147); /* Couleur sombre adaptée à ton thème */
+    color: white; /* Texte en blanc */
+    padding: 20px 12.5%; /* Espacement intérieur pour respirer */
+    text-align: center; /* Centrer le contenu */
+}
+
+.footer-content {
+    display: flex; /* Disposition en ligne pour organiser les éléments */
+    justify-content: space-between; /* Sépare les sections */
+    align-items: center; /* Centre verticalement */
+    flex-wrap: wrap; /* Permet le retour à la ligne sur petits écrans */
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.9rem; /* Taille légèrement réduite pour un footer */
+}
+
+.footer-links {
+    list-style: none; /* Supprime les puces des liens */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px; /* Espacement entre les liens */
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: white; /* Liens blancs */
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Effet de transition pour le hover */
+}
+
+.footer-links li a:hover {
+    color: #a8e6cf; /* Change la couleur au survol */
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Les éléments passent en colonne */
+        text-align: center; /* Centre tout le contenu */
+    }
+
+    .footer-links {
+        justify-content: center; /* Centre les liens */
+        margin-top: 10px;
+    }
+}
+
+.social-icons a {
+    color: white; /* Couleur des icônes */
+    font-size: 1.5rem;
+    margin: 0 10px; /* Espacement entre les icônes */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #a8e6cf; /* Couleur au survol */
+}

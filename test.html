@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendrier Statique</title>
+  <style>
+    /* Conteneur principal */
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr); /* 7 colonnes pour les jours de la semaine */
+      grid-gap: 1px; /* Espacement entre les cellules */
+      max-width: 600px; /* Largeur maximale du calendrier */
+      margin: 20px auto; /* Centre horizontalement */
+      background-color: transparent; /* Fond de la grille */
+      padding: 10px; /* Marges internes */
+    }
+
+    /* Style des cellules */
+    .day {
+      background-color: transparent;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px; /* Hauteur des cellules */
+      border: 1px solid #ccc;
+      font-family: Arial, sans-serif;
+      font-size: 40px;
+    }
+
+    /* En-têtes pour les jours de la semaine */
+    .day-header {
+      background-color: transparent; /* Couleur de l'en-tête */
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calendar">
+    <!-- En-têtes des jours de la semaine -->
+    <div class="day day-header">Lun</div>
+    <div class="day day-header">Mar</div>
+    <div class="day day-header">Mer</div>
+    <div class="day day-header">Jeu</div>
+    <div class="day day-header">Ven</div>
+    <div class="day day-header">Sam</div>
+    <div class="day day-header">Dim</div>
+
+    <!-- Jours du mois -->
+    <!-- Exemple pour novembre 2024 (mois commençant un vendredi) -->
+    <div class="day"></div> <!-- Cellule vide pour décaler -->
+    <div class="day"></div>
+    <div class="day"></div>
+    <div class="day"></div>
+    <div class="day"></div>
+    <div class="day">1</div>
+    <div class="day">2</div>
+    <div class="day">3</div>
+    <div class="day">4</div>
+    <div class="day">5</div>
+    <div class="day">6</div>
+    <div class="day">7</div>
+    <div class="day">8</div>
+    <div class="day">9</div>
+    <div class="day">10</div>
+    <div class="day">11</div>
+    <div class="day">12</div>
+    <div class="day">13</div>
+    <div class="day">14</div>
+    <div class="day">15</div>
+    <div class="day">16</div>
+    <div class="day">17</div>
+    <div class="day">18</div>
+    <div class="day">19</div>
+    <div class="day">20</div>
+    <div class="day">21</div>
+    <div class="day">22</div>
+    <div class="day">23</div>
+    <div class="day">24</div>
+    <div class="day">25</div>
+    <div class="day">26</div>
+    <div class="day">27</div>
+    <div class="day">28</div>
+    <div class="day">29</div>
+    <div class="day">30</div>
+  </div>
+</body>
+</html>

@@ -265,7 +265,7 @@ body:has(main:target) .navbar {
         background-position: center; /* Centre l'image */
         background-repeat: no-repeat; /* Évite la répétition de l'image */
         grid-column: 1;
-        grid-row:5 ;
+        grid-row:3 ;
     }
 }
 .intermediatehover {
@@ -309,7 +309,7 @@ body:has(main:target) .navbar {
         background-position: center; /* Centre l'image */
         background-repeat: no-repeat; /* Évite la répétition de l'image */
         grid-column: 1;
-        grid-row:3 ;
+        grid-row:5 ;
     }
 }
 .hardhover {
@@ -322,6 +322,7 @@ body:has(main:target) .navbar {
     opacity: 0; /* La vidéo est cachée par défaut */
     pointer-events: none; 
 }
+
 .hard:hover .hardhover {
     background-image: none;
     transform: scale(1.05); /* Agrandit légèrement le carré */
@@ -335,6 +336,18 @@ body:has(main:target) .navbar {
     align-self:start;
     padding: 15px;
     font-size: 20px;
+}
+
+@media (max-width:768px) {
+    .hardhover {
+        display:none;
+    }
+    .intermediatehover {
+        display: none ;
+    }
+    .easyhover {
+        display: none;
+    }
 }
 
 .texte {

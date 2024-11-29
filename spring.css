@@ -366,21 +366,11 @@ body:has(main:target) .navbar {
 }
 
 
-.fall {
+.season {
     height:4rem;
 }
 
-.winter {
-    height:4rem;
-}
 
-.summer {
-    height:4rem;
-}
-
-.spring {
-    height:4rem;
-}
 
 
 .modulecalendar{

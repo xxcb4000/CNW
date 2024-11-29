@@ -12,21 +12,21 @@ body, html {
     background-image: url("winterbackground.jpg"); /* Remplace par le chemin de ton image */
     background-size: cover; /* L'image couvre toute la zone */
     background-attachment: fixed /* Centre l'image */
-
     /* background-repeat: repeat-y; */
     /* background-position: center; */
+
 }
 
 
 /* Header Section */
 header {
-    position: relative;
+    position:relative;
     height: 100vh;
     overflow: hidden;
 }
 
 a {
-    text-decoration: none;
+    text-decoration:none;
 }
 
 .background-video {
@@ -39,25 +39,22 @@ a {
     z-index: 1;
 }
 
-
 .welcome-text {
     position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    text-align: left;
+    top: 20%;
+    left: 10%;
     color: white;
     z-index: 2;
     /*text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);*/
 }
 
 .welcome-text h1 {
-    font-size: 4rem;
+    font-size: min(12vw, 10vh);
 }
 
 .welcome-text p {
-    font-size: 2rem;
-    margin-top: 10px;
+    font-size: min(7vw, 5vh);
+    margin-top: 5vh;
 }
 
 .heart {
@@ -66,6 +63,8 @@ a {
     vertical-align: -0.3em; /* Aligne le cœur avec le texte */
     margin-left: -0.1em; /* Ajoute un petit espace entre "Wallonie" et le cœur */
 }
+
+
 
 /* Navbar Section */
 .navbar {
@@ -88,6 +87,12 @@ a {
 .logo {
     height: 60px; /* Ajuste la taille du logo */
     width: auto;
+    
+}
+@media (max-width:768px) {
+    .logo {
+        display:none;
+    }
 }
 
 .navbar.visible {
@@ -104,6 +109,18 @@ a {
     margin: 0;
     padding: 0;
 }
+@media (max-width:768px) {
+    .navbar ul {
+        list-style: none;
+        width:100%;
+        display: flex;
+        justify-content: center; /* Aligne les liens à droite */
+        gap: 20px; /* Espacement entre les liens */
+        margin: 0;
+        padding: 0;
+    }
+
+}
 
 .navbar li a {
     text-decoration: none;
@@ -118,137 +135,257 @@ body:has(main:target) .navbar {
     top: 0;
 }
 
-.walks {
+/* Main Section */
+
+.titre {
+    color: white ;
+    padding: min(5vw, 7vh) 5px ;
+    font-size: min(7vw, 5vh);
+    text-align:center;
+}
+
+.mapLiege {
+    width:100%;
+    max-width:100vw;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 0px 0px 0px;
+
+}
+
+@media (max-width:768px) {
+    .mapLiege {
+        width:100%;
+        max-width:100vw;
+        display:grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        align-items: center;
+        padding: 0px 0px 0px;
+    
+    }
+}
+
+
+.mapliegechild {
+    max-width: 100%;
+}
+
+
+.walksgrid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 5fr 1fr;
     gap: 20px;
-    padding: 50px 50px 0;
+    padding: 0px 0px;
     place-items: center;
 
 }
 
-section {
-    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond légère */
+@media (max-width:768px) {
+    .walksgrid {
+        display: grid;
+        grid-template-rows: 4fr 1fr 4fr 1fr 4fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        padding: 0px 0px 0;
+        place-items: center;
+    
+    }
+}
+
+.squareradius {
     border: 1px solid #ccc; /* Bordure subtile */
     border-radius: 40px; /* Coins arrondis */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
-    padding: 20px;
-    color: #000000; /* Assure que le texte est lisible */
+    padding: 0px;
+    color: #ffffff; /* Assure que le texte est lisible */
     line-height: 1.6;
     text-align: center;
     height: 350px; /* Hauteur fixe pour les carrés */
     aspect-ratio: 1/1;
 }
-section:hover {
-    transform: scale(1.05); /* Agrandit légèrement le carré */
-    transition: transform 0.3s ease;
-}
-
-.level {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px 50px 0;
-    color: #ffffff; /* Texte blanc pour contraster */
-    font-size: 1.5rem; /* Taille légèrement plus grande */
-    font-weight:normal ; /* Rendre le texte plus prononcé */
-    text-align: center;
-    letter-spacing: 2px; /* Espacement entre les lettres pour un effet moderne */
-    text-transform: lowercase; /* Met tout en majuscules pour un style épuré */
-}
 
 
-.hard {
-    background-image: url("winterhard.jpg"); /* Remplace par le chemin de ton image */
+
+.easy {
+    background-image: url("springeasy.jpg"); /* Remplace par le chemin de ton image */
     background-size: cover; /* L'image couvre toute la zone */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Évite la répétition de l'image */
+    grid-column: 1;
+    grid-row:1 ;
+}
+@media (max-width:768px){
+    .easy {
+        background-image: url("springeasy.jpg"); /* Remplace par le chemin de ton image */
+        background-size: cover; /* L'image couvre toute la zone */
+        background-position: center; /* Centre l'image */
+        background-repeat: no-repeat; /* Évite la répétition de l'image */
+        grid-column: 1;
+        grid-row:1 ;
+    }
+}
+.easyhover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* La vidéo est cachée par défaut */
+    pointer-events: none; 
+}
+.easy:hover .easyhover {
+    background-image: none;
+    transform: scale(1.05); /* Agrandit légèrement le carré */
+    transition: transform 0.2s ease;
+    opacity: 1;
+    border: 1px solid #ccc; /* Bordure subtile */
+    border-radius: 40px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+.easytext {
+    align-self:start;
+    padding: 15px;
+    font-size: 20px;
 }
 
 .intermediate {
-    background-image: url("winterintermediate.jpg"); /* Remplace par le chemin de ton image */
+    background-image: url("springintermediate.jpg"); /* Remplace par le chemin de ton image */
     background-size: cover; /* L'image couvre toute la zone */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Évite la répétition de l'image */
+    grid-column: 2;
+    grid-row:1 ;
+}
+@media (max-width:768px) {
+    .intermediate{
+        background-image: url("springintermediate.jpg"); /* Remplace par le chemin de ton image */
+        background-size: cover; /* L'image couvre toute la zone */
+        background-position: center; /* Centre l'image */
+        background-repeat: no-repeat; /* Évite la répétition de l'image */
+        grid-column: 1;
+        grid-row:3 ;
+    }
+}
+.intermediatehover {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* La vidéo est cachée par défaut */
+    pointer-events: none; 
+}
+.intermediate:hover .intermediatehover {
+    background-image: none;
+    transform: scale(1.05); /* Agrandit légèrement le carré */
+    transition: transform 0.2s ease;
+    opacity: 1;
+    border: 1px solid #ccc; /* Bordure subtile */
+    border-radius: 40px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+
+}
+.intermediatetext {
+    align-self:start;
+    padding: 15px;
+    font-size: 20px;
 }
 
-.easy {
-    background-image: url("wintereasy.jpg"); /* Remplace par le chemin de ton image */
+.hard {
+    background-image: url("springhard.jpg"); /* Remplace par le chemin de ton image */
     background-size: cover; /* L'image couvre toute la zone */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Évite la répétition de l'image */
+    grid-column: 3;
+    grid-row:1 ;
+}
+@media (max-width:768px) {
+    .hard {
+        background-image: url("springhard.jpg"); /* Remplace par le chemin de ton image */
+        background-size: cover; /* L'image couvre toute la zone */
+        background-position: center; /* Centre l'image */
+        background-repeat: no-repeat; /* Évite la répétition de l'image */
+        grid-column: 1;
+        grid-row:5 ;
+    }
+}
+.hardhover {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* La vidéo est cachée par défaut */
+    pointer-events: none; 
 }
 
-.textLiege {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    padding: 50px;
-    place-items: center;
-    color: #ffffff; /* Texte gris foncé */
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align:justify;
+.hard:hover .hardhover {
+    background-image: none;
+    transform: scale(1.05); /* Agrandit légèrement le carré */
+    transition: transform 0.2s ease;
+    opacity: 1;
+    border: 1px solid #ccc; /* Bordure subtile */
+    border-radius: 40px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
 }
-.mapLiege {
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: flex-start; /* Centre verticalement */
-    width: 100%; /* Utilise toute la largeur disponible */
-    margin: 0 auto; /* Centre la carte dans son parent */
-    height: auto; /* Conserve les proportions */
-    padding: 30px 150px 0;
-
+.hardtext {
+    align-self:start;
+    padding: 15px;
+    font-size: 20px;
 }
 
-.fall {
-    height:4rem;
-}
-
-.winter {
-    height:4rem;
-}
-
-.summer {
-    height:4rem;
-}
-
-.spring {
-    height:4rem;
-}
-
-
-.stitre {
-    color: white ;
-    padding: 60px 120px 0;
-    font-size:35px;
+@media (max-width:768px) {
+    .hardhover {
+        display:none;
+    }
+    .intermediatehover {
+        display: none ;
+    }
+    .easyhover {
+        display: none;
+    }
 }
 
 .texte {
     color: white ;
-    padding: 60px 120px;
-    font-size:25px;
+    padding: 7vh 5vw ;
+    font-size: 3.8vh;
+    text-align:left;
+}
+@media (max-width: 768px) {
+    .texte {
+        color: white ;
+        padding: 0vh 5vw 5vh ;
+        font-size: 5.1vw;
+        text-align:justify;
+    }
 }
 
 
-.cadrecalendrier {
+.season {
+    height:4rem;
+}
+
+
+
+
+.modulecalendar{
     display: grid ;
     grid-template-columns: 2fr 3fr 2fr;
     gap: 0px;
     padding: 0 0 0px;
     align-items:center;
     margin: 0 0 200px;
-
-
 }
 
 .month {
-    color:white;
     font-size: 50px;
     text-align:right;
-    padding: 0 30px;
-
-
+    padding: 0 20px;
 }
 
 .calendar {
@@ -258,15 +395,10 @@ section:hover {
     max-width: 600px; /* Largeur maximale du calendrier */
     margin: 0px; /* Centre horizontalement */
     background-color: transparent; /* Fond de la grille */
-
-
-
   }
-
   .goingright {
     padding:0 0 0 30px;
   }
-
 
   /* Style des cellules */
   .day {
@@ -291,16 +423,7 @@ section:hover {
 
   .dayeventeasy {
     background-color: rgb(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px; /* Hauteur des cellules */
-    border: 1px solid #ccc;
-    font-family: Arial, sans-serif;
-    font-size: 40px;
     position: relative;
-    text-decoration: none;
   }
 
   .dayeventeasy::after {
@@ -313,14 +436,6 @@ section:hover {
 }
 .dayeventintermediate {
     background-color: rgb(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px; /* Hauteur des cellules */
-    border: 1px solid #ccc;
-    font-family: Arial, sans-serif;
-    font-size: 40px;
     position: relative;
   }
 
@@ -335,14 +450,6 @@ section:hover {
 }
 .dayeventhard {
     background-color: rgb(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px; /* Hauteur des cellules */
-    border: 1px solid #ccc;
-    font-family: Arial, sans-serif;
-    font-size: 40px;
     position: relative;
   }
 
@@ -355,9 +462,52 @@ section:hover {
     z-index: 3; /* S'assure que la pastille est au-dessus du contenu */
 }
 
+@media (max-width:768px) {
+    .modulecalendar{
+        display:flex;
+        justify-content:center;
+    }
+
+    .month {
+        display:none;
+    }
+    .goingright{
+        display:none;
+    }
+    .day {
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px; /* Hauteur des cellules */
+        border: 1px solid #ccc;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        aspect-ratio: 1/1 ;
+    }
+    .dayeventeasy {
+        background-color: rgb(255, 255, 255, 0.2);
+        position: relative;
+      }
+    .dayeventintermediate {
+        background-color: rgb(255, 255, 255, 0.2);
+        position: relative;
+      }
+    .dayeventhard {
+        background-color: rgb(255, 255, 255, 0.2);
+        position: relative;
+      }
+      .day-header {
+        background-color: transparent; /* Couleur de l'en-tête */
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+    }
+}
 
 footer {
-    background-color: rgba(0, 11, 38, 0.884); /* Couleur sombre adaptée à ton thème */
+    background: rgba(0, 11, 38, 0.8); /* Couleur sombre adaptée à ton thème */
     color: white; /* Texte en blanc */
     padding: 20px 12.5%; /* Espacement intérieur pour respirer */
     text-align: center; /* Centrer le contenu */

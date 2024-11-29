@@ -449,10 +449,8 @@ body:has(main:target) .navbar {
 
 @media (max-width:768px) {
     .modulecalendar{
-        display:block;
-        width: 280px;
-        padding: 0 9% 50px;
-        margin: 0 0 0px;
+        display:flex;
+        justify-content:center;
     }
 
     .month {

@@ -109,6 +109,18 @@ a {
     margin: 0;
     padding: 0;
 }
+@media (max-width:768px) {
+    .navbar ul {
+        list-style: none;
+        width:100%;
+        display: flex;
+        justify-content: center; /* Aligne les liens à droite */
+        gap: 20px; /* Espacement entre les liens */
+        margin: 0;
+        padding: 0;
+    }
+
+}
 
 .navbar li a {
     text-decoration: none;

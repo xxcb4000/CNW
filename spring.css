@@ -325,28 +325,6 @@ body:has(main:target) .navbar {
     font-size: 20px;
 }
 
-
-
-.textLiege {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    padding: 50px;
-    place-items: center;
-    color: #ffffff; /* Texte gris foncé */
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align:justify;
-}
-
-
-
-.stitre {
-    color: white ;
-    padding: 0px 120px;
-    font-size:35px;
-}
-
 .texte {
     color: white ;
     padding: 7vh 5vw ;
@@ -380,23 +358,19 @@ body:has(main:target) .navbar {
 }
 
 
-.cadrecalendrier {
+.modulecalendar{
     display: grid ;
     grid-template-columns: 2fr 3fr 2fr;
     gap: 0px;
     padding: 0 0 0px;
     align-items:center;
     margin: 0 0 200px;
-
-
 }
 
 .month {
     font-size: 50px;
     text-align:right;
-    padding: 0 30px;
-
-
+    padding: 0 20px;
 }
 
 .calendar {
@@ -406,11 +380,7 @@ body:has(main:target) .navbar {
     max-width: 600px; /* Largeur maximale du calendrier */
     margin: 0px; /* Centre horizontalement */
     background-color: transparent; /* Fond de la grille */
-
-
-
   }
-
   .goingright {
     padding:0 0 0 30px;
   }
@@ -438,16 +408,7 @@ body:has(main:target) .navbar {
 
   .dayeventeasy {
     background-color: rgb(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px; /* Hauteur des cellules */
-    border: 1px solid #ccc;
-    font-family: Arial, sans-serif;
-    font-size: 40px;
     position: relative;
-    text-decoration: none;
   }
 
   .dayeventeasy::after {
@@ -460,14 +421,6 @@ body:has(main:target) .navbar {
 }
 .dayeventintermediate {
     background-color: rgb(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px; /* Hauteur des cellules */
-    border: 1px solid #ccc;
-    font-family: Arial, sans-serif;
-    font-size: 40px;
     position: relative;
   }
 
@@ -482,14 +435,6 @@ body:has(main:target) .navbar {
 }
 .dayeventhard {
     background-color: rgb(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px; /* Hauteur des cellules */
-    border: 1px solid #ccc;
-    font-family: Arial, sans-serif;
-    font-size: 40px;
     position: relative;
   }
 
@@ -502,7 +447,51 @@ body:has(main:target) .navbar {
     z-index: 3; /* S'assure que la pastille est au-dessus du contenu */
 }
 
+@media (max-width:768px) {
+    .modulecalendar{
+        display:block;
+        width: 280px;
+        padding: 0 9% 50px;
+        margin: 0 0 0px;
+    }
 
+    .month {
+        display:none;
+    }
+    .goingright{
+        display:none;
+    }
+    .day {
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px; /* Hauteur des cellules */
+        border: 1px solid #ccc;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        aspect-ratio: 1/1 ;
+    }
+    .dayeventeasy {
+        background-color: rgb(255, 255, 255, 0.2);
+        position: relative;
+      }
+    .dayeventintermediate {
+        background-color: rgb(255, 255, 255, 0.2);
+        position: relative;
+      }
+    .dayeventhard {
+        background-color: rgb(255, 255, 255, 0.2);
+        position: relative;
+      }
+      .day-header {
+        background-color: transparent; /* Couleur de l'en-tête */
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+    }
+}
 
 footer {
     background-color: rgba(0, 37, 10, 1); /* Couleur sombre adaptée à ton thème */

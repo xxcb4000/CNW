@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Printemps</title>
     <link rel="stylesheet" href="spring.css">
     <link rel="icon" href="springico.ico" type="image/x-icon">
@@ -10,8 +10,8 @@
 </head>
 <body>
     <header class="header">
-        <video class="background-video" autoplay muted loop>
-            <source src="springvidHQ.mp4" type="video/mp4">
+        <video class="background-video" autoplay muted loop playsinline>
+            <source src="springvid.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="welcome-text">
@@ -41,62 +41,74 @@
 
         </div>
 
+        <div class="mapLiege">
+            <div>
+                <img src="mapspringplusleft.png" alt="carte de la province de Liège" class="mapliegechild">
+            </div>
+            <div>
+                <img src="mapspringplusright.png" alt="carte de la province de Liège" class="mapliegechild">
+            </div>
+        </div>
+
 
         <div>
-            <img src="mapspringplus.png" alt="carte de la province de Liège" class="mapLiege">
-        </div>
-        <div>
-            <p class="stitre"> 
+            <p class="titre"> 
                 Choisissez votre niveau, préparez votre matériel, on s'occupe du reste. 
             </p>
         </div>
 
-        <div class ="walks"> 
-            <a href="springeasy.html">
-            <section class="easy">
-                <video class="easyhover" autoplay muted loop>
+        <div class ="walksgrid"> 
+            <div class="squareradius easy">
+                <a href="springeasy.html">
+                    <div>
+                        <video class="squareradius easyhover" autoplay muted loop>
 
-                    <source src="springeasy.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </section>
-            </a>
-            <section class="intermediate">
-                <video class="intermediatehover" autoplay muted loop>
-                    <source src="springintermediate.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </section>
-            <section class="hard">
-                <video class="hardhover" autoplay muted loop>
-                    <source src="springhard.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </section>
-        </div>
-
-
-        <div class ="level"> 
+                            <source src="springeasy.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </a>
+            </div>
+            <div class="easytext">
                 <p>&#128994 facile</p>
+            </div>
+            <div class="squareradius intermediate">
+                <div>
+                    <video class="squareradius intermediatehover" autoplay muted loop>
+                        <source src="springintermediate.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="intermediatetext">
                 <p>&#128992 Intermédiaire</p>
+            </div>
+            <div class="squareradius hard">
+                <div>
+                    <video class="squareradius hardhover" autoplay muted loop>
+                        <source src="springhard.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="hardtext">
                 <p>&#128308 difficile</p>
+            </div>
         </div>
 
-        <div>
 
 
-            <p class ="texte">
-                À chaque saison, nous vous proposons 3 balades en fonction de votre niveau : <br>
+        <div class ="texte">
+            <p>
+                À chaque saison, nous vous proposons trois balades en fonction de votre niveau : <br>
                 &nbsp &nbsp &nbsp - le niveau &#128994 facile s'adresse à toute la famille, dès 8 ans ;<br>
                 &nbsp &nbsp &nbsp - le niveau &#128992 intermédiaire s'adresse aux parents accompagnés de jeunes à partir de 12 ans ;<br>
                 &nbsp &nbsp &nbsp - le niveau &#128308 difficile est réservé aux adultes et jeunes adultes, pour les 18 ans et plus. 
             </p>
-
-
         </div>
-        <div class="cadrecalendrier">
 
-  
+
+        <div class="cadrecalendrier">
             <div>
                 <p class="month">
                     Avril <br> 2025

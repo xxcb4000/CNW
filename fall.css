@@ -133,7 +133,7 @@ section {
     border: 1px solid #ccc; /* Bordure subtile */
     border-radius: 40px; /* Coins arrondis */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
-    padding: 20px;
+    padding: 0px;
     color: #000000; /* Assure que le texte est lisible */
     line-height: 1.6;
     text-align: center;
@@ -158,27 +158,31 @@ section:hover {
     text-transform: lowercase; /* Met tout en majuscules pour un style épuré */
 }
 
-
-.hard {
-    background-image: url("fallhard.jpg"); /* Remplace par le chemin de ton image */
-    background-size: cover; /* L'image couvre toute la zone */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Évite la répétition de l'image */
+.easy {
+    width:100%; /* Centre l'image */
+    overflow: hidden;
+}
+.easyimg{
+    object-fit: cover;
 }
 
 .intermediate {
-    background-image: url("fallintermediate.jpg"); /* Remplace par le chemin de ton image */
-    background-size: cover; /* L'image couvre toute la zone */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Évite la répétition de l'image */
+
+    overflow: hidden;
+}
+.intermediateimg{
+    max-width: 350px;
+    object-fit: cover;
+}
+.hard {
+    width:100%; /* Centre l'image */
+    overflow: hidden;
+}
+.hardimg{
+    max-height: 350px;
+    object-fit: cover;
 }
 
-.easy {
-    background-image: url("falleasy.jpg"); /* Remplace par le chemin de ton image */
-    background-size: cover; /* L'image couvre toute la zone */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Évite la répétition de l'image */
-}
 
 .textLiege {
     display: grid;

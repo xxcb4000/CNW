@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallonie #oui</title>
-    <link rel="stylesheet" href="springstylesheet.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="springeasy.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
 </head>
 <body>
@@ -14,32 +14,111 @@
         <h1> 
             Chemin des Jonquilles &#128994
         </h1>
+        <p class="h1alt">
+            Chemin des <br>Jonquilles &#128994
+        </p>
         <h2>
-            <i class="fas fa-clock"></i> 1h30 | <i class="fas fa-map-marker-alt"></i> Botrange | <i class="fas fa-arrow-up"></i> 300m | <i class="fas fa-hiking"></i> famille-friendly
+            <i class="fas fa-clock"></i> 1h30 | <i class="fas fa-map-marker-alt"></i> Botrange | <i class="fas fa-arrow-up"></i> 100m | <i class="fas fa-hiking"></i> famille-friendly
         </h2>
+        <p class="h2alt">
+            <i class="fas fa-clock"></i> 1h30 <br> <i class="fas fa-map-marker-alt"></i> Botrange <br> <i class="fas fa-arrow-up"></i> 100m <br> <i class="fas fa-hiking"></i> famille-friendly
+        </p>
+
     </header>
 
     <nav class="navbar">
-        <a href="spring.html">
+        <a href="index.html">
             <img src="logoCNW.png" alt="Logo Wallonie" class="logo">
         </a>
         
         <ul>
-            <li><a href="spring.html"><img src="springcircle.png" alt="printemps" class="spring"></a></li>
-            <li><a href="summer.html"><img src="summer.png" alt="été" class="summer"></a></li>
-            <li><a href="fall.html"><img src="fall.png" alt="automne" class="fall"></a></li>
-            <li><a href="winter.html"><img src="winter.png" alt="hiver" class="winter"></a></li>
+            <li><a href="index.html"><img src="springcircle.png" alt="printemps" class="season"></a></li>
+            <li><a href="summer.html"><img src="summer.png" alt="été" class="season"></a></li>
+            <li><a href="fall.html"><img src="fall.png" alt="automne" class="season"></a></li>
+            <li><a href="winter.html"><img src="winter.png" alt="hiver" class="season"></a></li>
         </ul>
     </nav>
 
     <main>
-        <div>
-            un peu de texte pour présenter la balade
+        <div class="sousmenu">
+            Printemps > Facile &#128994
         </div>
-        <div>
-            <img src="map.png" alt="carte de la province de Liège" class="mapLiege">
+        <div class="mapLiege">
+            <img src="mapspringplusleft.png" alt="carte de la province de Liège" class="mapliegechild">
+            <div class="paddingTelephone">
+                <h3>À quoi s'attendre ? <i class="fa-regular fa-compass"></i></h3>
+                <p class="mapliegechild2">
+                    Le chemin des jonquilles, c'est une balade de 4km
+                    dans les magnifiques étendues de jonquilles au coeur des Ardennes. 
+                    Nous serons à 694 mètres d'altitude, il peut faire un peu plus 
+                    froid qu'en ville. Vous recevrez un briefing de balade quelques jours 
+                    avant le jour <i>J</i> reprenant notamment les conditions météorologiques. 
+                    Le tracé a été choisi par notre guide pour être 
+                    accessible à toute la famille de 7 à 70 ans avec un dénnivelé total 
+                    de maximum 100 mètres. N'hésitez pas
+                    à nous contacter pour en savoir plus. 
+                    À la fin de la balade, un délicieux repas est prévu à la 
+                    brasserie Peak, fabuleuse brasserie entièrement rénovée avec
+                    une vue imprenable sur la nature environnante. 
+                </p>
+                <h3>Déroulé de la journée <i class="fas fa-clock"></i></h3>
+                <p class="mapliegechild2">
+                    · Départ de Liège à 9h30 (boulevard d'Avroy) <br>
+                    · Transfert en car vers le signal de Botrange 11h <br>
+                    · Durée de la balade : 1h30 <br>
+                    · Repas à la brasserie Peak à 12h30 <br>
+                    · Retour à Liège vers 15h30
+                </p>
+                <h3>Matériel nécessaire <i class="fas fa-hiking"></i></h3>
+                <p class="mapliegechild2">
+                    Aucun matériel spécifique n'est nécessaire, tout est prévu. 
+                    Pendant le transfert en car, chaque personne recevra 
+                    une gourde d'eau fraiche remplie ainsi qu'une collation. 
+                    Évitez seulement de prendre vos bonnes chaussures de ville
+                    car nos intinéraires se font principalement sur des chemins et sentiers. 
+                </p>
+
+            </div>
+
         </div>
+
+        <div class="partenaire">
+            <div class="titre">
+                <p><br>Après l'effort, le réconfort.<br>
+                Notre brasserie partenaire <br>pour cette balade :<br><br><span class="emphase">Brasserie Peak <i class="fa-regular fa-registered"></i></span></p>
+            </div>
+
+            <div class="parentLogo">
+                <img src="peak2.png" class="logoPeak">
+                <a href="https://peakbeer.be/fr/restaurant" target="_blank" class="peak">
+                <img src="https://images.squarespace-cdn.com/content/v1/571f1f90b654f9869bd08ad4/1522323701549-4J4GHCPSJHRQOEHTDZ3E/DSC_2750.jpg" >
+                </a>
+            </div>
+        </div>
+
+
+
+
+        <div class="gallery-container">
+            <button class="gallery-btn left" id="prev"><</button>
+            <div class="gallery-mover">
+                <div class="gallery">
+    
+                </div>
+            </div>
+            <button class="gallery-btn right" id="next">></button>
+        </div>
+
+        <script src="springeasy.js"></script>
+
+        <div class="prochainessorties">
+            <h3 class="soustitres"> Prochaines sorties > Printemps > Facile &#128994</h3>
+
+        </div>
+
+        <h3 class="soustitres">Vous voulez tenter un autre niveau ?</h3>
         <div class ="walks"> 
+
             <a href="springeasy.html">
             <section class="easy">
                 <video class="easyhover" autoplay muted loop>
@@ -73,7 +152,7 @@
         <div>
 
             <p class="titre">
-                Une journée dans les Ardennes aller/retour à partir du centre de Liège.
+                Une journée dans les Ardennes aller-retour à partir du centre de Liège.
             <p>
             <p class ="textLiege">
                 On connaît mal la Wallonie et sa nature. Canada-non-Wallonie vous propose de 

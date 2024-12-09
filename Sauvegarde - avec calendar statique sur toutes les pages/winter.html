@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiver</title>
+    <link rel="stylesheet" href="winter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+</head>
+<body>
+    <header class="header">
+        <video class="background-video" autoplay muted loop>
+            <source src="wintervid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="welcome-text">
+            <h1>Laponie ? <br>Non. <br>Wallonie <img src="winter.png" alt="cœur blanc" class="heart"></h1>
+            <p>Balade dans les Ardennes <br>à partir de Liège<br><br>#hiver #winter</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="accueil.html">
+            <img src="logoCNW.png" alt="Logo Wallonie" class="logo">
+        </a>
+        
+        <ul>
+            <li><a href="spring.html"><img src="spring.png" alt="printemps" class="spring"></a></li>
+            <li><a href="summer.html"><img src="summer.png" alt="été" class="summer"></a></li>
+            <li><a href="fall.html"><img src="fall.png" alt="automne" class="fall"></a></li>
+            <li><a href="winter.html"><img src="wintercircle.png" alt="hiver" class="winter"></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div>
+            <p class="stitre"> 
+                Choisissez votre niveau, préparez votre matériel, on s'occupe du reste. 
+            </p>
+        </div>
+        <img src="mapwinterplus.png" alt="carte de la province de Liège" class="mapLiege">
+        <div class ="walks"> 
+            <section class="easy">
+            </section>
+            <section class="intermediate">
+            </section>
+            <section class="hard">
+            </section>
+        </div>
+        <div class ="level"> 
+                <p>Facile &#128994</p>
+                <p>Intermédiaire &#128992</p>
+                <p>Difficile &#128308</p>
+        </div>
+     
+        <p class ="texte">
+            À chaque saison, nous vous proposons 3 balades en fonction de votre niveau : <br>
+            &nbsp &nbsp &nbsp - le niveau &#128994 facile s'adresse à toute la famille, dès 8 ans ;<br>
+            &nbsp &nbsp &nbsp - le niveau &#128992 intermédiaire s'adresse aux parents accompagnés de jeunes à partir de 12 ans ;<br>
+            &nbsp &nbsp &nbsp - le niveau &#128308 difficile est réservé aux adultes et jeunes adultes, pour les 18 ans et plus. 
+        </p>
+
+        <div class="cadrecalendrier">
+            <div>
+                <p class="month">
+                    Janvier <br> 2026
+                </p>
+            </div>
+            <ul class="calendar">
+                <!-- En-têtes des jours de la semaine -->
+                <li class="day day-header">Lun</li>
+                <li class="day day-header">Mar</li>
+                <li class="day day-header">Mer</li>
+                <li class="day day-header">Jeu</li>
+                <li class="day day-header">Ven</li>
+                <li class="day day-header">Sam</li>
+                <li class="day day-header">Dim</li>
+            
+                <!-- Jours du mois -->
+                <!-- Exemple pour novembre 2024 (mois commençant un vendredi) -->
+                <li class="day"></li> <!-- Cellule vide pour décaler -->
+                <li class="day"></li>
+                <li class="day"></li>
+                <li class="day">1</li>
+                <li class="day">2</li>
+                <li class="day">3</li>
+                <li class="dayeventintermediate">4</li>
+                <li class="day">5</li>
+                <li class="day">6</li>
+                <li class="day">7</li>
+                <li class="day">8</li>
+                <li class="day">9</li>
+                <li class="day">10</li>
+                <li class="day">11</li>
+                <li class="day">12</li>
+                <li class="day">13</li>
+                <li class="day">14</li>
+                <li class="day">15</li>
+                <li class="day">16</li>
+                <li class="day">17</li>
+                <a href="springeasy.html">
+                    <li class="dayeventeasy">18</li>
+                </a>
+               
+                <li class="day">19</li>
+                <li class="day">20</li>
+                <li class="day">21</li>
+                <li class="day">22</li>
+                <li class="day">23</li>
+                <li class="day">24</li>
+                <li class="dayeventhard">25</li>
+                <li class="day">26</li>
+                <li class="day">27</li>
+                <li class="day">28</li>
+                <li class="day">29</li>
+                <li class="day">30</li>
+                <li class="day">31</li>
+                <li class="day"></li>
+            </ul>
+            <div class="goingright">
+                <img src="goingright.png">
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Récupère la barre de navigation
+        const navbar = document.querySelector('.navbar');
+    
+        // Fonction pour gérer l'apparition/disparition
+        const handleScroll = () => {
+            if (window.scrollY > 50) { // Si l'utilisateur défile de plus de 50px
+                navbar.classList.add('visible');
+            } else if (window.scrollY <= 50 && event.clientY < 100) {
+                navbar.classList.add('visible');
+            } else { // Si l'utilisateur revient en haut
+                navbar.classList.remove('visible');
+            }
+        };
+    
+        // Ajoute un écouteur pour l'événement de défilement
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('mousemove', handleScroll);
+    </script>
+    
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Balades Ardennaises. Tous droits réservés.</p>
+            <nav>
+                <ul class="footer-links">
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#experiences">Nos expériences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    
+    
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Balades Ardennaises. Tous droits réservés.</p>
+            <nav>
+                <ul class="footer-links">
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#experiences">Nos expériences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

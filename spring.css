@@ -49,11 +49,11 @@ a {
 }
 
 .welcome-text h1 {
-    font-size: min(12vw, 10vh);
+    font-size: min(12vw, 8vh);
 }
 
 .welcome-text p {
-    font-size: min(7vw, 5vh);
+    font-size: min(7vw, 3vh);
     margin-top: 5vh;
 }
 
@@ -140,8 +140,13 @@ body:has(main:target) .navbar {
 .titre {
     color: white ;
     padding: min(5vw, 7vh) 5px ;
-    font-size: min(7vw, 5vh);
+    font-size: 3vh;
     text-align:center;
+}
+@media (max-width:768px) {
+    .titre {
+        font-size: 3.9vh;
+    }
 }
 
 .mapLiege {
@@ -353,7 +358,7 @@ body:has(main:target) .navbar {
 .texte {
     color: white ;
     padding: 7vh 5vw ;
-    font-size: 3.8vh;
+    font-size: 2.2vh;
     text-align:left;
 }
 @media (max-width: 768px) {

@@ -317,11 +317,23 @@ h3 {
 
 
 .soustitres {
-    padding: 15px 0 0 20px;
+    padding: 20px 0 0 20px;
+}
+@media (max-width:768px) {
+    .soustitres{
+        font-size: 20px;
+    }
 }
 
 .prochainessorties {
     height : 350px;
+}
+.iframecalendar {
+    margin: 20px;
+    width: 400px;
+    height:400px;
+    border:none;
+
 }
 
 

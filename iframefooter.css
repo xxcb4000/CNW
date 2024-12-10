@@ -5,6 +5,7 @@
     list-style: none;
     color:white;
     text-decoration:none;
+    overflow: hidden;
 }
 
 /* Styles généraux pour le footer */

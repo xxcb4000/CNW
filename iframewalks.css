@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow:hidden;
 }
 
 body, html {
@@ -45,17 +46,21 @@ body, html {
     line-height: 1.6;
     text-align: center;
     height: 320px; /* Hauteur fixe pour les carrés */
-    aspect-ratio: 1/1;
+    width:320px;
     overflow: hidden;
+
+}
+img {
+    object-fit : cover;
+    height:100%;
+    width:100%;
 }
 
 .squarewalk:hover {
     transition: transform 0.2s ease;
     transform: scale(1.05);
 }
-img {
-    object-fit: cover;
-}
+
 
 
 

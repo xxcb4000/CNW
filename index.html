@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Printemps</title>
-    <link rel="stylesheet" href="spring.css">
+    <link rel="stylesheet" href="season.css">
     <link rel="icon" href="springico.ico" type="image/x-icon">
  
 </head>
-<body>
+<body class="bodyspring">
     <header class="header">
         <video class="background-video" autoplay muted loop playsinline>
             <source src="springvid.mp4" type="video/mp4">
@@ -20,13 +20,13 @@
         </div>
     </header>
 
-    <nav class="navbar">
+    <nav class="navbarspring">
         <a href="spring.html">
-            <img src="logoCNW.png" alt="Logo Wallonie" class="logo">
+            <img src="bonhommewalk.png" alt="Logo Wallonie" class="logo">
         </a>
         
         <ul>
-            <li><a href="spring.html"><img src="springcircle.png" alt="printemps" class="season"></a></li>
+            <li><a href="index.html"><img src="springcircle.png" alt="printemps" class="season"></a></li>
             <li><a href="summer.html"><img src="summer.png" alt="été" class="season"></a></li>
             <li><a href="fall.html"><img src="fall.png" alt="automne" class="season"></a></li>
             <li><a href="winter.html"><img src="winter.png" alt="hiver" class="season"></a></li>
@@ -59,130 +59,33 @@
 
         </div>
 
-        <div class ="walksgrid"> 
-            <div class="squareradius easy">
-                <a href="springeasy.html">
-                    <div>
-                        <video class="squareradius easyhover" autoplay muted loop>
-
-                            <source src="springeasy.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </a>
-            </div>
-            <div class="easytext">
-                <p>&#128994 facile</p>
-            </div>
-            <div class="squareradius intermediate">
-                <a href="springintermediate.html">
-                    <div>
-                        <video class="squareradius intermediatehover" autoplay muted loop>
-                            <source src="springintermediate.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>                    
-                </a>
-            </div>
-            <div class="intermediatetext">
-                <p>&#128992 Intermédiaire</p>
-            </div>
-            <div class="squareradius hard">
-                <a href="springhard.html"></a>
-                    <div>
-                        <video class="squareradius hardhover" autoplay muted loop>
-                            <source src="springhard.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </a>
-            </div>
-            <div class="hardtext">
-                <p>&#128308 difficile</p>
-            </div>
-        </div>
+        <iframe src="iframespringwalks.html" class="iframewalks"></iframe>
 
 
 
         <div class ="texte">
             <p>
                 À chaque saison, nous vous proposons trois balades en fonction de votre niveau : <br>
-                &nbsp · le niveau &#128994 facile s'adresse à toute la famille, dès 8 ans ;<br>
+                &nbsp · le niveau &#128994 facile s'adresse à toute la famille, dès 7 ans ;<br>
                 &nbsp · le niveau &#128992 intermédiaire s'adresse aux parents accompagnés de jeunes à partir de 12 ans ;<br>
                 &nbsp · le niveau &#128308 difficile est réservé aux adultes et jeunes adultes, pour les 18 ans et plus. 
             </p>
         </div>
 
 
-        <section class="modulecalendar"> 
-            <div class="month">
-                <p>
-                    Avril <br> 2025
-                </p>
-            </div>
-            <div>
-                <ul class="calendar">
-                    <!-- En-têtes des jours de la semaine -->
-                    <li class="day day-header">Lun</li>
-                    <li class="day day-header">Mar</li>
-                    <li class="day day-header">Mer</li>
-                    <li class="day day-header">Jeu</li>
-                    <li class="day day-header">Ven</li>
-                    <li class="day day-header">Sam</li>
-                    <li class="day day-header">Dim</li>
-                
-                    <!-- Jours du mois -->
-                    <!-- Exemple pour novembre 2024 (mois commençant un vendredi) -->
-                    <li class="day"></li> <!-- Cellule vide pour décaler -->
-                    <li class="day">1</li>
-                    <li class="day">2</li>
-                    <li class="day">3</li>
-                    <li class="day">4</li>
-                    <li class="day">5</li>
-                    <li class="day dayeventintermediate">6</li>
-                    <li class="day">7</li>
-                    <li class="day">8</li>
-                    <li class="day">9</li>
-                    <li class="day">10</li>
-                    <li class="day">11</li>
-                    <li class="day">12</li>
-                    <li class="day">13</li>
-                    <li class="day">14</li>
-                    <li class="day">15</li>
-                    <li class="day">16</li>
-                    <li class="day">17</li>
-                    <li class="day">18</li>
-                    <li class="day">19</li>
-                    <a href="springeasy.html">
-                        <li class="day dayeventeasy">20</li>
-                    </a>
-                   
-                    <li class="day">21</li>
-                    <li class="day">22</li>
-                    <li class="day">23</li>
-                    <li class="day">24</li>
-                    <li class="day">25</li>
-                    <li class="day">26</li>
-                    <li class="day dayeventhard">27</li>
-                    <li class="day">28</li>
-                    <li class="day">29</li>
-                    <li class="day">30</li>
-                    <li class="day"></li>
-                    <li class="day"></li>
-                    <li class="day"></li>
-                    <li class="day"></li>
-                </ul>
-            </div>
-            <div class="goingright">
-                <img src="goingright.png">
-            </div>
-        </section>
+        <iframe src="iframecalendar.html" class="iframecalendar"></iframe>
+        
+
+
     </main>
+
+    <iframe src="iframefooter.html" class="iframefooter"></iframe>
+
 
 
     <script>
         // Récupère la barre de navigation
-        const navbar = document.querySelector('.navbar');
+        const navbar = document.querySelector('nav');
     
 
         // Fonction pour gérer l'apparition/disparition
@@ -203,23 +106,5 @@
     </script>
 
 
-        <footer>
-            <div class="footer-content">
-                <p>&copy; 2024 Balades Ardennaises. Tous droits réservés.</p>
-                <nav>
-                    <ul class="footer-links">
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#experiences">Nos expériences</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="social-icons">
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-        </footer>
 </body>
-
 </html>

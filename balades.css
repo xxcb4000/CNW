@@ -9,6 +9,7 @@ body, html {
     font-family: Arial, sans-serif;
     color: white;
     scroll-behavior: smooth;  
+    overflow-x:hidden;
 }
 a {
     text-decoration: none;
@@ -49,7 +50,7 @@ h1 {
     display: none;
     }
     .h1alt {
-        display:block;
+    display:block;
     }
 }
 h2 {
@@ -159,148 +160,41 @@ body:has(main:target) .navbar {
 }
 
 /* Main Section */
-main.spring{
+.bodyspring {
     background-image: url("springbackground.jpg"); /* Remplace par le chemin de ton image */
     background-size: cover; /* L'image couvre toute la zone */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Évite la répétition de l'image */
+    background-attachment: fixed /* Centre l'image */
+
 }
-main.summer {
+.bodysummer {
     background-image: url("summerbackground.jpg"); /* Remplace par le chemin de ton image */
     background-size: cover; /* L'image couvre toute la zone */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Évite la répétition de l'image */
+    background-attachment: fixed /* Centre l'image */
+
 }
-main.fall {
-    background-image: url("fallbackground.jpg"); /* Remplace par le chemin de ton image */
-    background-size: cover; /* L'image couvre toute la zone */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Évite la répétition de l'image */
-}
-main.winter {
+.bodywinter {
     background-image: url("winterbackground.jpg"); /* Remplace par le chemin de ton image */
     background-size: cover; /* L'image couvre toute la zone */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Évite la répétition de l'image */
-}
-.walks {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    padding: 20px 50px 0;
-    place-items: center;
+    background-attachment: fixed /* Centre l'image */
 
+}
+.bodyfall {
+    background-image: url("fallbackground.jpg"); /* Remplace par le chemin de ton image */
+    background-size: cover; /* L'image couvre toute la zone */
+    background-attachment: fixed /* Centre l'image */ 
+}
+
+.iframewalks {
+    width:100% ;
+    height: 450px ;
+    border: none;
 }
 @media (max-width:768px) {
-    .walks {
-        display: grid;
-        grid-template-rows: 4fr 1fr 4fr 1fr 4fr 1fr;
-        grid-template-columns: 1fr;
-        gap: 0px;
-        padding: 0px 0px 0;
-        place-items: center;
-    
+    .iframewalks{
+        height:1350px;
     }
 }
 
-section {
-    border: 1px solid #ccc; /* Bordure subtile */
-    border-radius: 40px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
-    padding: 0px;
-    color: #ffffff; /* Assure que le texte est lisible */
-    line-height: 1.6;
-    text-align: center;
-    height: 350px; /* Hauteur fixe pour les carrés */
-    aspect-ratio: 1/1;
-}
-
-
-
-.level {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px 50px 0;
-    color: #ffffff; /* Texte blanc pour contraster */
-    font-size: 1.5rem; /* Taille légèrement plus grande */
-    font-weight:normal ; /* Rendre le texte plus prononcé */
-    text-align: center;
-    letter-spacing: 2px; /* Espacement entre les lettres pour un effet moderne */
-    text-transform: lowercase; /* Met tout en majuscules pour un style épuré */
-}
-
-.easy {
-    width:100%; /* Centre l'image */
-    overflow: hidden;
-}
-.easyimg{
-    object-fit: cover;
-}
-
-@media (max-width:768px){
-    .easy {
-
-        grid-column: 1;
-        grid-row:1 ;
-    }
-}
-.easy:hover {
-    transition: transform 0.2s ease;
-    transform: scale(1.05);
-}
-
-.hard {
-    width:100%; /* Centre l'image */
-    overflow: hidden;
-}
-.hardimg{
-    max-height: 350px;
-    object-fit: cover;
-}
-@media (max-width:768px) {
-    .hard {
-        grid-column: 1;
-        grid-row:5 ;
-    }
-}
-.hard:hover {
-    transition: transform 0.2s ease;
-    transform: scale(1.05);
-}
-
-
-.intermediate {
-
-    overflow: hidden;
-}
-.intermediateimg{
-    max-width: 350px;
-    object-fit: cover;
-}
-@media (max-width:768px) {
-    .intermediate{
-        grid-column: 1;
-        grid-row:3 ;
-    }
-}
-.intermediate:hover {
-    transition: transform 0.2s ease;
-    transform: scale(1.05);
-}
-
-
-@media (max-width:768px) {
-    .hardhover {
-        display:none;
-    }
-    .intermediatehover {
-        display: none ;
-    }
-    .easyhover {
-        display: none;
-    }
-}
 
 .textLiege {
 
@@ -562,4 +456,23 @@ button {
     margin-right:15px;
     border-radius: 10px;
     box-shadow: 1px 1px 15px  rgba(0, 0, 0, 0.8) ;
+}
+
+.iframefooter {
+    width:100%;
+    height:460px;
+    border:none;
+    overflow:hidden;
+}
+body.bodyspring .iframefooter {
+    background-color: #00230361; /* Fond sombre professionnel */;
+}
+body.bodysummer .iframefooter {
+    background-color: rgba(0, 103, 124, 0.363);/* Fond sombre professionnel */;
+}
+body.bodyfall .iframefooter {
+    background-color: rgba(37, 4, 0, 0.32); /* Fond sombre professionnel */;
+}
+body.bodywinter .iframefooter {
+    background-color: rgba(0, 1, 37, 0.373);/* Fond sombre professionnel */;
 }

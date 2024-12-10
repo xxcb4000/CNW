@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.modulecalendar{
+    display: grid ;
+    grid-template-columns: 2fr 3fr 2fr;
+    gap: 0px;
+    padding: 0 0 0px;
+    align-items:center;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration:none;
+}
+
+.month {
+    font-size: 50px;
+    text-align:right;
+    padding: 0 20px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 colonnes pour les jours de la semaine */
+    grid-gap: 1px; /* Espacement entre les cellules */
+    max-width: 600px; /* Largeur maximale du calendrier */
+    margin: 0px; /* Centre horizontalement */
+    background-color: transparent; /* Fond de la grille */
+  }
+  .goingright {
+    padding:0 0 0 30px;
+  }
+
+  /* Style des cellules */
+  .day {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; /* Hauteur des cellules */
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+  }
+
+    /* En-têtes pour les jours de la semaine */
+    .day-header {
+        background-color: transparent; /* Couleur de l'en-tête */
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+  .dayeventeasy {
+    background-color: rgb(255, 255, 255, 0.2);
+    position: relative;
+  }
+
+  .dayeventeasy::after {
+    content: "\1F7E2"; /* Ajoute un élément vide pour la pastille */
+    position: absolute;
+    top: 5px; /* Distance du haut */
+    right: 5px; /* Distance de la droite */
+    font-size: 10px;
+    z-index: 3; /* S'assure que la pastille est au-dessus du contenu */
+}
+.dayeventintermediate {
+    background-color: rgb(255, 255, 255, 0.2);
+    position: relative;
+  }
+
+  .dayeventintermediate::after {
+    content: "\1F7E0"; /* Ajoute un élément vide pour la pastille */
+    position: absolute;
+    top: 5px; /* Distance du haut */
+    right: 5px; /* Distance de la droite */
+
+    font-size: 10px;
+    z-index: 3; /* S'assure que la pastille est au-dessus du contenu */
+}
+.dayeventhard {
+    background-color: rgb(255, 255, 255, 0.2);
+    position: relative;
+  }
+
+  .dayeventhard::after {
+    content: "\1F534"; /* Ajoute un élément vide pour la pastille */
+    position: absolute;
+    top: 5px; /* Distance du haut */
+    right: 5px; /* Distance de la droite */
+    font-size: 10px;
+    z-index: 3; /* S'assure que la pastille est au-dessus du contenu */
+}
+
+@media (max-width:768px) {
+    .modulecalendar{
+        display:flex;
+        justify-content:center;
+    }
+
+    .month {
+        display:none;
+    }
+    .goingright{
+        display:none;
+    }
+    .day {
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px; /* Hauteur des cellules */
+        border: 1px solid #ccc;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        aspect-ratio: 1/1 ;
+    }
+    .dayeventeasy {
+        background-color: rgb(255, 255, 255, 0.2);
+        position: relative;
+      }
+    .dayeventintermediate {
+        background-color: rgb(255, 255, 255, 0.2);
+        position: relative;
+      }
+    .dayeventhard {
+        background-color: rgb(255, 255, 255, 0.2);
+        position: relative;
+      }
+      .day-header {
+        background-color: transparent; /* Couleur de l'en-tête */
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+    }
+}

@@ -21,15 +21,21 @@ footer {
     display:grid;
     grid-template-columns: 0.8fr 0.1fr 3fr;
     text-align:left;
-    padding: 0px 0px 10px;;
+    padding: 0px 0px 10px;
+    align-items: center;
     
 }
+.onPhone {
+    display:none;
+}
+
 
 .menuwalks {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-left:30px;
 }
+
 
 .socialmedia {
     display:grid ;
@@ -93,4 +99,30 @@ footer p {
 
 .footerlinks a:hover {
     color: #007bff; /* Couleur au survol */
+}
+
+@media (max-width:768px) {
+    .shortcuts {
+        display:grid ;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    .menuwalks {
+        display:none;
+    }
+    .vertical {
+        display:none;
+    }
+    .socialmedia {
+        display:none;
+    }
+    .onPhone {
+        display:block;
+    }
+    .offPhone {
+        display:none;
+    }
+
+
 }

@@ -104,7 +104,7 @@ nav {
     background: rgba(0, 37, 10, 0.8);
 }
 .navbarsummer {
-    background: rgba(0, 103, 124, 0.614);
+    background: rgba(0, 56, 124, 0.71);
 }
 .navbarfall {
     background: rgba(37, 4, 0, 0.8);
@@ -253,7 +253,7 @@ body:has(main:target) nav {
     background-color: #00230361; /* Fond sombre professionnel */;
 }
 .bodysummer .iframefooter {
-    background-color: rgba(0, 103, 124, 0.363);/* Fond sombre professionnel */;
+    background-color: rgba(0, 56, 124, 0.71);/* Fond sombre professionnel */;
 }
 .bodyfall .iframefooter {
     background-color: rgba(37, 4, 0, 0.32); /* Fond sombre professionnel */;

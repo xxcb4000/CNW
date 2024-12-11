@@ -345,6 +345,11 @@ h3 {
     height:400px;
     border:none;
 }
+@media (max-width:768px) {
+    .iframecalendar{
+        height:300px;
+    }
+}
 
 
 
@@ -486,6 +491,12 @@ button {
     border:none;
     overflow:hidden;
 }
+@media (max-width:768px) {
+    .iframefooter {
+        height: 300px;
+    }
+}
+
 body.bodyspring .iframefooter {
     background-color: #00230361; /* Fond sombre professionnel */;
 }

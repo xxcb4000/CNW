@@ -167,18 +167,21 @@ body:has(main:target) .navbar {
 
 /* Main Section */
 .bodyspring {
+    background-color: rgb(124, 169, 67, 0.8);
     background-image: url("springbackground.jpg"); /* Remplace par le chemin de ton image */
     background-size: cover; /* L'image couvre toute la zone */
     background-attachment: fixed /* Centre l'image */
 
 }
 .bodysummer {
+    background-color: rgb(235, 157, 22, 0.8);
     background-image: url("summerbackground.jpg"); /* Remplace par le chemin de ton image */
     background-size: cover; /* L'image couvre toute la zone */
     background-attachment: fixed /* Centre l'image */
 
 }
 .bodywinter {
+    background-color: rgb(203, 144, 76, 0.8);
     background-image: url("winterbackground.jpg"); /* Remplace par le chemin de ton image */
     background-size: cover; /* L'image couvre toute la zone */
     background-attachment: fixed /* Centre l'image */

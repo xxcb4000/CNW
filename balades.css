@@ -189,6 +189,20 @@ body:has(main:target) .navbar {
     background-size: cover; /* L'image couvre toute la zone */
     background-attachment: fixed /* Centre l'image */ 
 }
+@media (max-width=768px) {
+    .bodyfall{
+        background-attachment: scroll;
+    }
+    .bodyspring{
+        background-attachment: scroll;
+    }
+    .bodysummer{
+        background-attachment: scroll;
+    }
+    .bodywinter{
+        background-attachment: scroll;
+    }
+}
 
 .iframewalks {
     width:100% ;

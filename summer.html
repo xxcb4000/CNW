@@ -8,9 +8,12 @@
 </head>
 <body class="bodysummer">
     <header class="header">
-        <video class="background-video" autoplay muted loop playsinline>
-            <source src="summervid.mp4" type="video/mp4" media="(min-width: 768px)">
-            <source src="summervidSD.mp4" type="video/mp4" media="(max-width: 767px)">
+        <video class="background-video" autoplay muted loop playsinline preloaded="auto">
+            <source src="summervid.mp4" type="video/mp4">
+        </video>
+        <video class="background-videoSD" autoplay muted loop playsinline preload="auto">
+            <source src="summervidSD.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
         <div class="welcome-text">
             <h1>Provence ? <br>Non. <br>Wallonie <img src="summer.png" alt="cœur blanc" class="heart"></h1>

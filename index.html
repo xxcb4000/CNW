@@ -10,9 +10,14 @@
 </head>
 <body class="bodyspring">
     <header class="header">
-        <video class="background-video" autoplay muted loop playsinline>
-            <source src="springvid.mp4" type="video/mp4" media="(min-width: 768px)">
-            <source src="springvidSD.mp4" type="video/mp4" media="(max-width: 767px)">
+        <video class="background-video" autoplay muted loop playsinline preload="auto">
+            <source src="springvid.mp4" type="video/mp4">
+            <!-- <source src="springvidSD.mp4" type="video/mp4" media="(max-width: 767px)"> -->
+            Your browser does not support the video tag.
+        </video>
+        <video class="background-videoSD" autoplay muted loop playsinline preload="auto">
+            <source src="springvidSD.mp4" type="video/mp4">
+            <!-- <source src="springvidSD.mp4" type="video/mp4" media="(max-width: 767px)"> -->
             Your browser does not support the video tag.
         </video>
         <div class="welcome-text">

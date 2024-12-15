@@ -102,17 +102,19 @@ h2 {
     transition: all 0.5s ease-in-out;
 }
 body.bodyspring .navbar {
-    background: rgba(0, 37, 10, 0.8);
+    background-color: #004206e3;
 }
 body.bodyfall .navbar {
-    background: rgba(38, 12, 0, 0.8);
+    background: rgba(37, 4, 0, 0.8);
 }
 body.bodysummer .navbar {
-    background: rgba(0, 56, 124, 0.71);
+    background-color: rgba(30, 91, 166, 0.798);
 }
 body.bodywinter .navbar {
-    background: rgba(0, 11, 38, 0.8);
+    background: rgba(0, 1, 37, 0.8);
 }
+
+
 
 .logo {
     height: 60px; /* Ajuste la taille du logo */
@@ -349,22 +351,25 @@ h3 {
 }
 
 .prochainessorties {
-    height : 350px;
+    height:100%;
 }
 .iframecalendarconteneur {
-    display:flex;
-    justify-items:center;
-    padding: 15px 0 0 0;
+    position:absolute;
+    width:100%;
+    height:310px;
 }
 
 .iframecalendar {
+    position:relative ;
+    left:30%;
+    padding: 15px 0 0 0;
     width: 400px;
-    height:400px;
+    height:300px;
     border:none;
 }
 @media (max-width:768px) {
     .iframecalendar{
-        height:300px;
+        left:0%;
     }
 }
 
@@ -515,14 +520,15 @@ button {
 }
 
 body.bodyspring .iframefooter {
-    background-color: #00230361; /* Fond sombre professionnel */;
+    background-color: #004206e3;/* Fond sombre professionnel */;
 }
 body.bodysummer .iframefooter {
-    background-color: rgba(0, 56, 124, 0.71);/* Fond sombre professionnel */;
+    background-color: rgba(30, 91, 166, 0.798);/* Fond sombre professionnel */;
 }
 body.bodyfall .iframefooter {
-    background-color: rgba(37, 4, 0, 0.32); /* Fond sombre professionnel */;
+    background-color: rgba(48, 5, 0, 0.887) ; /* Fond sombre professionnel */;
 }
 body.bodywinter .iframefooter {
-    background-color: rgba(0, 1, 37, 0.373);/* Fond sombre professionnel */;
+    background-color: rgba(26, 28, 81, 0.909);/* Fond sombre professionnel */;
 }
+

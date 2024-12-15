@@ -9,31 +9,9 @@ body, html {
     font-family: Arial, sans-serif;
     color: white;
     scroll-behavior: smooth;  
-}
-
-.bodyspring {
-    background-image: url("springbackground.jpg"); /* Remplace par le chemin de ton image */
-    background-size: cover; /* L'image couvre toute la zone */
-    background-attachment: fixed /* Centre l'image */
 
 }
-.bodysummer {
-    background-image: url("summerbackground.jpg"); /* Remplace par le chemin de ton image */
-    background-size: cover; /* L'image couvre toute la zone */
-    background-attachment: fixed /* Centre l'image */
 
-}
-.bodywinter {
-    background-image: url("winterbackground.jpg"); /* Remplace par le chemin de ton image */
-    background-size: cover; /* L'image couvre toute la zone */
-    background-attachment: fixed /* Centre l'image */
-
-}
-.bodyfall {
-    background-image: url("fallbackground.jpg"); /* Remplace par le chemin de ton image */
-    background-size: cover; /* L'image couvre toute la zone */
-    background-attachment: fixed /* Centre l'image */ 
-}
 
 
 /* Header Section */
@@ -122,7 +100,7 @@ nav {
     background: rgba(0, 37, 10, 0.8);
 }
 .navbarsummer {
-    background: rgba(0, 56, 124, 0.71);
+    background-color: rgba(30, 91, 166, 0.798);
 }
 .navbarfall {
     background: rgba(37, 4, 0, 0.8);
@@ -182,6 +160,26 @@ body:has(main:target) nav {
 }
 
 /* Main Section */
+main {
+    position:relative;
+    height:100%;
+
+}
+
+.background {
+    position : absolute ;
+    top: 0;
+    left: 0;
+    height:100%;
+    width:100%;
+    z-index: -4;
+
+}
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Permet à l'image de s'adapter sans déformation */
+}
 
 .titre {
     color: white ;
@@ -281,14 +279,14 @@ body:has(main:target) nav {
 
 
 .bodyspring .iframefooter {
-    background-color: #00230361; /* Fond sombre professionnel */;
+    background-color: #004206e3; ;
 }
 .bodysummer .iframefooter {
-    background-color: rgba(0, 56, 124, 0.71);/* Fond sombre professionnel */;
+    background-color: rgba(30, 91, 166, 0.798);
 }
 .bodyfall .iframefooter {
-    background-color: rgba(37, 4, 0, 0.32); /* Fond sombre professionnel */;
+    background-color: rgba(48, 5, 0, 0.887) ;
 }
 .bodywinter .iframefooter {
-    background-color: rgba(0, 1, 37, 0.339);/* Fond sombre professionnel */;
+    background-color: rgba(26, 28, 81, 0.909);
 }

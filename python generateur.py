@@ -16,7 +16,7 @@ for balade in balades:
         balade_html = balade_html.replace(f"{{{{{placeholder}}}}}", str(value))
 
     # Sauvegarde du fichier généré
-    output_filename = f"balade_{balade['NAME_WALK_PASTILLE'].replace(' ', '_').lower()}.html"
+    output_filename = f"{balade['SEASON_LEVEL_HTML']}"
     with open(output_filename, 'w', encoding='utf-8') as f:
         f.write(balade_html)
 

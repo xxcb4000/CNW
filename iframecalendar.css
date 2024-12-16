@@ -8,7 +8,7 @@
     display: grid ;
     grid-template-columns: 2fr 3fr 2fr;
     gap: 0px;
-    padding: 0 0 0px;
+    padding: 25px 0 0px;
     align-items:center;
     color:white;
     font-family: Arial, Helvetica, sans-serif;
@@ -18,7 +18,7 @@ a {
 }
 
 .month {
-    font-size: 50px;
+    font-size: 3vw;
     text-align:right;
     padding: 0 20px;
 }
@@ -27,13 +27,19 @@ a {
     display: grid;
     grid-template-columns: repeat(7, 1fr); /* 7 colonnes pour les jours de la semaine */
     grid-gap: 1px; /* Espacement entre les cellules */
-    max-width: 600px; /* Largeur maximale du calendrier */
+    max-width: 420px; /* Largeur maximale du calendrier */
     margin: 0px; /* Centre horizontalement */
     background-color: transparent; /* Fond de la grille */
   }
-  .goingright {
-    padding:0 0 0 30px;
-  }
+
+.goingright {
+  padding:0 0 0 30px;
+  height: 360px;
+  object-fit: contain;
+}
+.goingright img {
+  height:100%;
+}
 
   /* Style des cellules */
   .day {
@@ -42,10 +48,11 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px; /* Hauteur des cellules */
+    height: 60px; /* Hauteur des cellules */
+    width:60px;
     border: 1px solid #ccc;
     font-family: Arial, sans-serif;
-    font-size: 40px;
+    font-size: 2.5vw;
   }
 
     /* En-têtes pour les jours de la semaine */
@@ -53,7 +60,7 @@ a {
         background-color: transparent; /* Couleur de l'en-tête */
         color: white;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 2vw;
     }
 
   .dayeventeasy {
@@ -116,6 +123,7 @@ a {
         justify-content: center;
         align-items: center;
         height: 45px; /* Hauteur des cellules */
+        width:45px;
         border: 1px solid #ccc;
         font-family: Arial, sans-serif;
         font-size: 20px;

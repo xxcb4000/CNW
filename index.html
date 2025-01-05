@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Printemps</title>
     <link rel="stylesheet" href="season.css">
+    <link rel="stylesheet" href="calendarjs.css">
     <link rel="icon" href="springico.ico" type="image/x-icon">
  
 </head>
@@ -82,7 +83,49 @@
         </div>
 
 
-        <iframe src="iframecalendar.html" class="iframecalendar"></iframe>
+        <div class="calendriersconteneur">
+            <!-- point d'accroche de mon premier calendrier
+             calendrier1 c'est pour accrocher, calendrier c'est pour le css -->
+            <div class="calendrier1 calendrier"></div>
+            <!-- script de mon premier calendrier -->
+            <script src="generateMonth.js"></script>
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier1',
+                    mois : 'Avril' ,
+                    annee : '2025',
+                    jourFacile : 13,
+                    jourIntermediaire : 13,
+                    jourDifficile : 20
+                })
+            </script>
+
+            <div class="calendrier2 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier2',
+                    mois : 'Mai' ,
+                    annee : '2025',
+                    jourFacile : 18,
+                    jourIntermediaire : 18,
+                    jourDifficile : 4
+                })
+            </script>
+
+            <div class="calendrier3 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier3',
+                    mois : 'Juin' ,
+                    annee : '2025',
+                    jourFacile : 1,
+                    jourIntermediaire : 22,
+                    jourDifficile : 1
+                })
+            </script>
+        </div>
         
 
 

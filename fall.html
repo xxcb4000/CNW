@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automne</title>
     <link rel="stylesheet" href="season.css">
+    <link rel="stylesheet" href="calendarjs.css">
     <link rel="icon" href="fallico.png" type="image/png">
 
 </head>
@@ -75,7 +76,49 @@
             </p>
         </div>
 
-        <iframe src="iframecalendar.html" class="iframecalendar"></iframe>
+        <div class="calendriersconteneur">
+            <!-- point d'accroche de mon premier calendrier
+             calendrier1 c'est pour accrocher, calendrier c'est pour le css -->
+            <div class="calendrier1 calendrier"></div>
+            <!-- script de mon premier calendrier -->
+            <script src="generateMonth.js"></script>
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier1',
+                    mois : 'Septembre' ,
+                    annee : '2025',
+                    jourFacile : 7,
+                    jourIntermediaire : 21,
+                    jourDifficile : 21
+                })
+            </script>
+
+            <div class="calendrier2 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier2',
+                    mois : 'Octobre' ,
+                    annee : '2025',
+                    jourFacile : 5,
+                    jourIntermediaire : 19,
+                    jourDifficile : 19
+                })
+            </script>
+
+            <div class="calendrier3 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier3',
+                    mois : 'Novembre' ,
+                    annee : '2025',
+                    jourFacile : 23,
+                    jourIntermediaire : 30,
+                    jourDifficile : 16
+                })
+            </script>
+        </div>
 
     
     </main>

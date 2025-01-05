@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Été</title>
     <link rel="stylesheet" href="season.css">
+    <link rel="stylesheet" href="calendarjs.css">
 </head>
 <body class="bodysummer">
     <header class="header">
@@ -75,7 +76,49 @@
         </div>
 
 
-        <iframe src="iframecalendar.html" class="iframecalendar"></iframe>
+        <div class="calendriersconteneur">
+            <!-- point d'accroche de mon premier calendrier
+             calendrier1 c'est pour accrocher, calendrier c'est pour le css -->
+            <div class="calendrier1 calendrier"></div>
+            <!-- script de mon premier calendrier -->
+            <script src="generateMonth.js"></script>
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier1',
+                    mois : 'Juin' ,
+                    annee : '2025',
+                    jourFacile : 29,
+                    jourIntermediaire : 29,
+                    jourDifficile : 8
+                })
+            </script>
+
+            <div class="calendrier2 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier2',
+                    mois : 'Juillet' ,
+                    annee : '2025',
+                    jourFacile : 6,
+                    jourIntermediaire : 20,
+                    jourDifficile : 13
+                })
+            </script>
+
+            <div class="calendrier3 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier3',
+                    mois : 'Août' ,
+                    annee : '2025',
+                    jourFacile : 10,
+                    jourIntermediaire : 3,
+                    jourDifficile : 17
+                })
+            </script>
+        </div>
 
 
     </main>

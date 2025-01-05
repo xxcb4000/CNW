@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiver</title>
     <link rel="stylesheet" href="season.css">
+    <link rel="stylesheet" href="calendarjs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 </head>
@@ -76,7 +77,49 @@
             </p>
         </div>
 
-        <iframe src="iframecalendar.html" class="iframecalendar"></iframe>
+        <div class="calendriersconteneur">
+            <!-- point d'accroche de mon premier calendrier
+             calendrier1 c'est pour accrocher, calendrier c'est pour le css -->
+            <div class="calendrier1 calendrier"></div>
+            <!-- script de mon premier calendrier -->
+            <script src="generateMonth.js"></script>
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier1',
+                    mois : 'Décembre' ,
+                    annee : '2025',
+                    jourFacile : 21,
+                    jourIntermediaire : 14,
+                    jourDifficile : 28
+                })
+            </script>
+
+            <div class="calendrier2 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier2',
+                    mois : 'Janvier' ,
+                    annee : '2025',
+                    jourFacile : 3,
+                    jourIntermediaire : 11,
+                    jourDifficile : 25
+                })
+            </script>
+
+            <div class="calendrier3 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier3',
+                    mois : 'Février' ,
+                    annee : '2025',
+                    jourFacile : 16,
+                    jourIntermediaire : 15,
+                    jourDifficile : 1
+                })
+            </script>
+        </div>
 
 
     </main>

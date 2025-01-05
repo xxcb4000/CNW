@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Été</title>
     <link rel="stylesheet" href="balades.css">
+    <link rel="stylesheet" href="calendarjs.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
 </head>
@@ -41,8 +42,12 @@
         <div class="sousmenu">
             Été > Facile &#128994
         </div>
+
         <div class="mapLiege">
-            <img src="mapspringplusleft.png" alt="carte provinces Liège et Luxembourg" class="mapliegechild">
+            <div>
+                <img src="mapspringplusleft.png" alt="carte provinces Liège et Luxembourg" class="mapliegechild">
+            </div>
+            
             <div class="paddingTelephone">
                 <h3><i class="fa-regular fa-compass"></i> &nbsp À quoi s'attendre ?</i></h3>
                 <p class="mapliegechild2">
@@ -60,9 +65,7 @@
                 <p class="mapliegechild2">
                     Aucun matériel spécifique n'est nécessaire, tout est prévu. Pendant le transfert en car, chaque personne recevra une gourde d'eau fraiche remplie ainsi qu'une collation. Évitez seulement de prendre vos bonnes chaussures de ville car nos intinéraires se font principalement sur des chemins et sentiers.
                 </p>
-
             </div>
-
         </div>
 
         <div class="partenaire">
@@ -79,9 +82,6 @@
             </div>
         </div>
 
-
-
-
         <div class="gallery-container">
             <button class="gallery-btn left" id="prev"></button>
             <div class="gallery-mover">
@@ -94,14 +94,57 @@
 
         <script src="springeasy.js"></script>
 
-        <div class="prochainessorties">
-            <h3 class="soustitres"> Prochaines sorties > Été > Facile &#128994</h3>
-            <div class="iframecalendarconteneur"></div>
-                <iframe src="iframecalendar.html" class="iframecalendar"></iframe>
-            </div>
+        <div class="sousmenu">
+            Prochaines sorties > Été > Facile &#128994
         </div>
 
-        <h3 class="soustitres">Vous voulez tenter un autre niveau ?</h3>
+        <div class="calendriersconteneur">
+            <!-- point d'accroche de mon premier calendrier
+             calendrier1 c'est pour accrocher, calendrier c'est pour le css -->
+            <div class="calendrier1 calendrier"></div>
+            <!-- script de mon premier calendrier -->
+            <script src="generateMonth.js"></script>
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier1',
+                    mois : 'Juin' ,
+                    annee : '2025',
+                    jourFacile : 29,
+                    jourIntermediaire : 0,
+                    jourDifficile : 0
+                })
+            </script>
+
+            <div class="calendrier2 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier2',
+                    mois : 'Juillet' ,
+                    annee : '2025',
+                    jourFacile : 6,
+                    jourIntermediaire : 0,
+                    jourDifficile : 0
+                })
+            </script>
+
+            <div class="calendrier3 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier3',
+                    mois : 'Août' ,
+                    annee : '2025',
+                    jourFacile : 10,
+                    jourIntermediaire : 0,
+                    jourDifficile : 0
+                })
+            </script>
+        </div>
+
+        <div class="sousmenu">
+            Vous voulez tenter un autre niveau ?
+        </div>
 
     
 

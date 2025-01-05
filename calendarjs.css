@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calendrier{
+    background-color: transparent;
+    color: rgb(255, 255, 255) ;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 410px;
+    width : 350px;
+    margin: 0 auto;
+}
+
+
+a {
+    all:unset;
+}
+
+#days-header {
+    font-size: 16px;
+    display : grid;
+    grid-template-columns: repeat(7, 50px);
+    font-weight: bold;
+
+}
+
+.calendrier-li {
+    height: 50px;
+    width: 50px;
+    border : solid 1px ;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.days-grid {
+    display : grid;
+    grid-template-columns: repeat(7, 50px);
+    font-size: 21px;
+}
+
+#month-year {
+    font-size: 21px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.jourFacile::after {
+    content:"\1F7E2";
+    display:inline-block;
+    position:absolute;
+    top:3px;
+    right:3px;
+    font-size:10px;
+    z-index:3;
+}
+
+.jourIntermediaire::after {
+    content:"\1F7E0";
+    display:inline-block;
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-size:10px;
+    z-index:3;
+}
+
+.jourDifficile::after {
+    content:"\1F534";
+    display:inline-block;
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-size:10px;
+    z-index:3;
+}
+
+

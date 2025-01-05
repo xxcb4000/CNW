@@ -20,4 +20,4 @@ for balade in balades:
     with open(output_filename, 'w', encoding='utf-8') as f:
         f.write(balade_html)
 
-print(f"Fichier HTML généré : {output_filename}")
+    print(f"Fichier HTML généré : {output_filename}")

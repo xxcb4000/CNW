@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{SAISON}}</title>
     <link rel="stylesheet" href="balades.css">
+    <link rel="stylesheet" href="calendarjs.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
 </head>
@@ -30,10 +31,10 @@
         </a>
         
         <ul>
-            <li><a href="index.html"><img src="springcircle.png" alt="printemps" class="season"></a></li>
-            <li><a href="summer.html"><img src="summer.png" alt="été" class="season"></a></li>
-            <li><a href="fall.html"><img src="fall.png" alt="automne" class="season"></a></li>
-            <li><a href="winter.html"><img src="winter.png" alt="hiver" class="season"></a></li>
+            <li><a href="index.html"><img src="{{URL_ICONE_PRINTEMPS}}" alt="printemps" class="season"></a></li>
+            <li><a href="summer.html"><img src="{{URL_ICONE_ETE}}" alt="été" class="season"></a></li>
+            <li><a href="fall.html"><img src="{{URL_ICONE_AUTOMNE}}" alt="automne" class="season"></a></li>
+            <li><a href="winter.html"><img src="{{URL_ICONE_HIVER}}" alt="hiver" class="season"></a></li>
         </ul>
     </nav>
 
@@ -41,8 +42,12 @@
         <div class="sousmenu">
             {{SAISON}} > {{LEVEL_PASTILLE}}
         </div>
+
         <div class="mapLiege">
-            <img src="{{IMAGE_MAP_URL}}" alt="carte provinces Liège et Luxembourg" class="mapliegechild">
+            <div>
+                <img src="{{IMAGE_MAP_URL}}" alt="carte provinces Liège et Luxembourg" class="mapliegechild">
+            </div>
+            
             <div class="paddingTelephone">
                 <h3><i class="fa-regular fa-compass"></i> &nbsp À quoi s'attendre ?</i></h3>
                 <p class="mapliegechild2">
@@ -60,9 +65,7 @@
                 <p class="mapliegechild2">
                     {{DESCRIPTION_MATERIEL}}
                 </p>
-
             </div>
-
         </div>
 
         <div class="partenaire">
@@ -79,9 +82,6 @@
             </div>
         </div>
 
-
-
-
         <div class="gallery-container">
             <button class="gallery-btn left" id="prev"></button>
             <div class="gallery-mover">
@@ -94,18 +94,61 @@
 
         <script src="springeasy.js"></script>
 
-        <div class="prochainessorties">
-            <h3 class="soustitres"> Prochaines sorties > {{SAISON}} > {{LEVEL_PASTILLE}}</h3>
-            <div class="iframecalendarconteneur"></div>
-                <iframe src="iframecalendar.html" class="iframecalendar"></iframe>
-            </div>
+        <div class="sousmenu">
+            Prochaines sorties > {{SAISON}} > {{LEVEL_PASTILLE}}
         </div>
 
-        <h3 class="soustitres">Vous voulez tenter un autre niveau ?</h3>
+        <div class="calendriersconteneur">
+            <!-- point d'accroche de mon premier calendrier
+             calendrier1 c'est pour accrocher, calendrier c'est pour le css -->
+            <div class="calendrier1 calendrier"></div>
+            <!-- script de mon premier calendrier -->
+            <script src="generateMonth.js"></script>
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier1',
+                    mois : '{{MOIS_1}}' ,
+                    annee : '{{ANNEE}}',
+                    jourFacile : {{JOUR_FACILE_1}},
+                    jourIntermediaire : {{JOUR_INTERMEDIAIRE_1}},
+                    jourDifficile : {{JOUR_DIFFICILE_1}}
+                })
+            </script>
+
+            <div class="calendrier2 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier2',
+                    mois : '{{MOIS_2}}' ,
+                    annee : '{{ANNEE}}',
+                    jourFacile : {{JOUR_FACILE_2}},
+                    jourIntermediaire : {{JOUR_INTERMEDIAIRE_2}},
+                    jourDifficile : {{JOUR_DIFFICILE_2}}
+                })
+            </script>
+
+            <div class="calendrier3 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier3',
+                    mois : '{{MOIS_3}}' ,
+                    annee : '{{ANNEE}}',
+                    jourFacile : {{JOUR_FACILE_3}},
+                    jourIntermediaire : {{JOUR_INTERMEDIAIRE_3}},
+                    jourDifficile : {{JOUR_DIFFICILE_3}}
+                })
+            </script>
+        </div>
+
+        <div class="sousmenu">
+            Vous voulez tenter un autre niveau ?
+        </div>
 
     
 
-        <iframe src="{{IFRAME_SEASON_WALKS}}" class="iframewalks"></iframe>      </div>
+        <iframe src="{{IFRAME_SEASON_WALKS}}" class="iframewalks"></iframe>      
 
 
 

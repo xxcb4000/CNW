@@ -1,0 +1,357 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    color: white;
+    scroll-behavior: smooth;  
+
+}
+button {
+    all:unset;
+}
+
+
+
+/* Header Section */
+body {
+    background-image: url('../assets/springbackground.jpg');
+    overflow-x: hidden;
+    z-index: 0;
+}
+
+a {
+    text-decoration:none;
+}
+
+
+
+
+
+
+.heart {
+    width: 1.2em; /* Taille ajustée à celle du texte */
+    height: auto; /* Conserve les proportions de l'image */
+    vertical-align: -0.3em; /* Aligne le cœur avec le texte */
+    margin-left: -0.1em; /* Ajoute un petit espace entre "Wallonie" et le cœur */
+}
+
+
+
+/* Navbar Section */
+nav {
+    position: fixed; /* Fixé en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 10px 65px 10px 65px; /* Moins de padding pour plus de compacité */
+    display: flex; /* Flexbox pour aligner logo et menu */
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: space-between; /* Sépare logo et liens */
+    z-index: 10;
+    opacity: 0; /* Invisible au départ */
+    transform: translateY(-100%); 
+    transition: all 0.5s ease-in-out;
+}
+.navbarspring {
+    background: rgba(0, 37, 10, 0.8);
+}
+.navbarsummer {
+    background-color: rgba(30, 91, 166, 0.798);
+}
+.navbarfall {
+    background: rgba(37, 4, 0, 0.8);
+}
+.navbarwinter {
+    background: rgba(0, 1, 37, 0.8);
+}
+
+.logo {
+    height: 60px; /* Ajuste la taille du logo */
+    width: auto;
+    
+}
+@media (max-width:768px) {
+    .logo {
+        display:none;
+    }
+}
+
+nav.visible {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Revient à sa position normale */
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Aligne les liens à droite */
+    gap: 20px; /* Espacement entre les liens */
+    margin: 0;
+    padding: 0;
+}
+@media (max-width:768px) {
+    nav ul {
+        list-style: none;
+        width:100%;
+        display: flex;
+        justify-content: center; /* Aligne les liens à droite */
+        gap: 20px; /* Espacement entre les liens */
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Sticky effect */
+body:has(main:target) nav {
+    top: 0;
+}
+
+/* Main Section */
+.titreconteneur {
+    text-align:center;
+    margin : 50px 0;
+    font-size : 30px;
+}
+
+.walksconteneur {
+    display:flex;
+    justify-content: center;
+    gap: 70px;
+    margin : 50px 0;
+
+}
+.cadrewalk {
+    position:relative;
+    border-radius: 10px;
+    box-shadow : 2px 2px 10px rgba(0, 0, 0, 0.223);
+    height : 400px;
+    width : 300px;
+}
+.cadrewalk img {
+    object-fit : cover;
+    height:100%;
+    width:100%;
+    border-radius: 10px;
+
+}
+
+
+.baladeinfosconteneur {
+    position: relative;
+    bottom : 100px;
+    border-radius: 10px;
+    height:100px;
+    text-align:right;
+    padding: 20px;
+}
+.baladeinfos {
+    height: 80px;
+    width:100%;
+}
+.baladeinfos p {
+    position:absolute;
+    top:-290px;
+    right:15px;
+    font-size:30px;
+}
+.cheminvisuel1{
+    position : absolute;
+    bottom : -45px;
+    left:25px;
+    z-index: -1;
+    background-color: rgba(1, 92, 9, 0.269);
+    height:50px;
+    width: 250px;
+    display:block;
+}
+.cheminvisuel2{
+    position : absolute;
+    bottom : -45px;
+    left:25px;
+    z-index: -1;
+    background-color: rgba(1, 92, 9, 0.269);
+    height:50px;
+    width: 250px;
+    display:none;
+}
+.cheminvisuel3{
+    position : absolute;
+    bottom : -45px;
+    left:25px;
+    z-index: -1;
+    background-color: rgba(1, 92, 9, 0.269);
+    height:50px;
+    width: 250px;
+    display:none;
+}
+.checkA {
+    display:block;
+}
+.checkB {
+    display:none;
+}
+.checkC {
+    display:none;
+}
+
+.inforeservationconteneur {
+    display:flex;
+    justify-content: center;
+    margin : 50px 0;
+    overflow: hidden;
+
+
+}
+.inforeservation {
+    z-index: 1;
+    box-shadow : 2px 2px 10px rgba(0, 0, 0, 0.146);
+    height : 450px;
+    width : 1200px;
+    /* background-color: hsl(0, 0%, 100%); */
+    display:flex ;
+    justify-content: center;
+    /* color: #015c08dd; */
+    align-items:center;
+    font-size: 20px;
+    white-space:normal;
+    background-color: rgba(0, 76, 18, 0.222);
+}
+
+.infoderoulement {
+    width:500px;
+    padding:0 20px 10px 20px;
+}
+.infoderoulement h3 {
+    padding: 0 0 15px 0px;
+    width:100%;
+}
+.descriptionbaladeconteneur {
+    height:100%;
+    display:flex;
+    align-items: center;
+}
+.descriptionbalade {
+    width:370px; 
+    padding:0 25px;
+    text-align: justify;
+}
+
+#buttonDate1 {
+    width:330px;
+}
+#buttonDate2 {
+    width:330px;
+}
+#buttonDate3 {
+    width:330px;
+}
+
+.datesconteneur {
+    width:330px;
+    background-color: none;
+}
+
+.date {
+    height:151px;
+    border-bottom: 1px solid #ffffffdd;
+    border-left: 1px solid #ffffffdd;
+    position:relative;
+}
+
+.date p {
+    position:absolute;
+    top:33%;
+    left:16%;
+}
+
+.datechoosen {
+    background-color: rgba(0, 68, 6, 0.418); 
+}
+.date .check1 {
+    position:absolute;
+    left:288px;
+    top:58px;
+    display:block;
+}
+.date .check2 {
+    position:absolute;
+    left:288px;
+    top:58px;
+    display:none;
+}
+.date .check3 {
+    position:absolute;
+    left:288px;
+    top:58px;
+    display:none;
+}
+
+.boutonconteneur {
+    display:flex;
+    justify-content: center;
+    margin : 50px 0;
+
+}
+.bouton {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow : 2px 2px 10px rgba(0, 0, 0, 0.223);
+    background-color: #015c08dd;
+    height : 60px;
+    width : 250px;
+    font-size: 20px;
+}
+
+
+
+.season {
+    height:4rem;
+}
+
+
+
+
+
+.iframefooter {
+    width:100%;
+    height:460px;
+    border:none;
+    overflow:hidden;
+}
+
+@media (max-width:768px) {
+    .iframefooter {
+        height: 300px;
+    }
+}
+
+
+.bodyspring .iframefooter {
+    background-color: rgba(0, 66, 6, 0.89); 
+}
+.bodysummer .iframefooter {
+    background-color: rgba(30, 91, 166, 0.798);
+}
+.bodyfall .iframefooter {
+    background-color: rgba(48, 5, 0, 0.887) ;
+}
+.bodywinter .iframefooter {
+    background-color: rgba(26, 28, 81, 0.909);
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiver</title>
+    <link rel="stylesheet" href="../css/balades.css">
+    <link rel="stylesheet" href="../css/calendarjs.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body class="bodywinter">
+    <header class="header">
+        <img src="../assets/wintereasy.jpg" class="headerImg">
+        <h1> 
+            <i class="fas fa-map-marker-alt"></i> Botrange &#128994
+        </h1>
+
+        <h2>
+            <i class="fas fa-clock"></i> 1h |  <i class="fas fa-arrow-up"></i> 100m | <i class="fas fa-hiking"></i> famille friendly
+        </h2>
+        <p class="h2alt">
+            <strong><i class="fas fa-map-marker-alt"></i> Botrange &#128994</strong> <br><br> <i class="fas fa-clock"></i> 1h | <i class="fas fa-arrow-up"></i> 100m <br> <i class="fas fa-hiking"></i> famille friendly
+        </p>
+
+    </header>
+
+    <nav class="navbar">
+        <a href="../html/index.html">
+            <img src="../assets/bonhommewalk.png" alt="Logo bonhomme walk" class="logo">
+        </a>
+        
+        <ul>
+            <li><a href="../html/index.html"><img src="../assets/spring.png" alt="printemps" class="season"></a></li>
+            <li><a href="../html/summer.html"><img src="../assets/summer.png" alt="été" class="season"></a></li>
+            <li><a href="../html/fall.html"><img src="../assets/fall.png" alt="automne" class="season"></a></li>
+            <li><a href="../html/winter.html"><img src="../assets/wintercircle.png" alt="hiver" class="season"></a></li>
+        </ul>
+    </nav>
+
+    <main class="winter">
+        <div class="sousmenu">
+            Hiver > Facile &#128994
+        </div>
+
+        <div class="mapLiege">
+            <div>
+                <img src="../assets/mapspringplusleft.png" alt="carte provinces Liège et Luxembourg" class="mapliegechild">
+            </div>
+            
+            <div class="paddingTelephone">
+                <h3><i class="fa-regular fa-compass"></i> &nbsp À quoi s'attendre ?</i></h3>
+                <p class="mapliegechild2">
+                    Nous vous invitons à une balade de 4km sur le chemin des Joncquilles, au cœur d’une des plus beaux plateaux des Ardennes. À une altitude de 694 mètres, prévoyez de vous habiller en fonction de la météo : un briefing complet vous sera envoyé quelques jours avant le départ pour vous préparer au mieux. Le parcours, soigneusement conçu par notre guide, est accessible à un public familial dès 8 ans, avec un dénivelé faible de 100 mètres. Après cette immersion dans une nature préservée, un moment de convivialité vous attend : un repas savoureux à la Brasserie Peak, un lieu chaleureux offrant une vue imprenable sur la nature. Pour toute question ou précision, n’hésitez pas à nous contacter ! 
+                </p>
+                <h3><i class="fas fa-clock"></i> &nbsp Déroulé de la journée</h3>
+                <p class="mapliegechild2">
+                    · Départ de Liège à 10h30 (boulevard d'Avroy) <br>
+                    · Transfert en car vers Botrange (11h30) <br>
+                    · Durée de la balade : 1h <br>
+                    · Repas à la brasserie Brasserie Peak à 12h30 <br>
+                    · Retour à Liège vers 15h30
+                </p>
+                <h3><i class="fas fa-hiking"></i> &nbsp Matériel nécessaire</h3>
+                <p class="mapliegechild2">
+                    Aucun matériel spécifique n'est nécessaire, tout est prévu. Pendant le transfert en car, chaque personne recevra une gourde d'eau fraiche remplie ainsi qu'une collation. Évitez seulement de prendre vos bonnes chaussures de ville car nos intinéraires se font principalement sur des chemins et sentiers.
+                </p>
+            </div>
+        </div>
+
+        <div class="partenaire">
+            <div class="titre">
+                <p><br>Après l'effort, le réconfort.<br>
+                Notre brasserie partenaire <br>pour cette balade :<br><br><span class="emphase">Brasserie Peak <i class="fa-regular fa-registered"></i></span></p>
+            </div>
+
+            <div class="parentLogo">
+                <img src="https://images.squarespace-cdn.com/content/v1/571f1f90b654f9869bd08ad4/1486988882960-MN5AQ8H3PW3974MU26E4/peak2.png?format=1500w" class="logoPeak">
+                <a href="https://peakbeer.be/fr/restaurant" target="_blank" class="peak">
+                <img src="https://images.squarespace-cdn.com/content/v1/571f1f90b654f9869bd08ad4/1522323701549-4J4GHCPSJHRQOEHTDZ3E/DSC_2750.jpg" >
+                </a>
+            </div>
+        </div>
+
+        <div class="gallery-container">
+            <button class="gallery-btn left" id="prev"></button>
+            <div class="gallery-mover">
+                <div class="gallery">
+    
+                </div>
+            </div>
+            <button class="gallery-btn right" id="next">></button>
+        </div>
+
+        <script src="../js/springeasy.js"></script>
+
+        <div class="sousmenu">
+            Prochaines sorties > Hiver > Facile &#128994
+        </div>
+
+        <div class="calendriersconteneur">
+            <!-- point d'accroche de mon premier calendrier
+             calendrier1 c'est pour accrocher, calendrier c'est pour le css -->
+            <div class="calendrier1 calendrier"></div>
+            <!-- script de mon premier calendrier -->
+            <script src="../js/generateMonth.js"></script>
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier1',
+                    mois : 'Décembre' ,
+                    annee : '2025',
+                    jourFacile : 21,
+                    jourIntermediaire : 0,
+                    jourDifficile : 0
+                })
+            </script>
+
+            <div class="calendrier2 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier2',
+                    mois : 'Janvier' ,
+                    annee : '2025',
+                    jourFacile : 3,
+                    jourIntermediaire : 0,
+                    jourDifficile : 0
+                })
+            </script>
+
+            <div class="calendrier3 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier3',
+                    mois : 'Février' ,
+                    annee : '2025',
+                    jourFacile : 16,
+                    jourIntermediaire : 0,
+                    jourDifficile : 0
+                })
+            </script>
+        </div>
+
+        <div class="sousmenu">
+            Vous voulez tenter un autre niveau ?
+        </div>
+
+    
+
+        <iframe src="iframewinterwalks.html" class="iframewalks"></iframe>      
+
+
+
+        <div>
+
+            <p class="titre">
+                Une journée dans les Ardennes aller-retour à partir du centre de Liège.
+            <p>
+            <p class ="textLiege">
+                Nous sommes des amoureux de notre région et, à chaque saison, nous sommes émerveillés par la beauté
+                de la nature qui nous entoure : baignade en été, brâme du cerf à l'automne, balade en raquettes en hiver,
+                randonnée sauvage au printemps... tout est possible, à seulement une heure de Liège. 
+                Bonhomme.walk vous propose une formule tout compris à partir du centre de Liège : voyage en car confort,
+                accompagnement par un guide professionnel, repas chaleureux dans une brasserie locale. Tout est 
+                organisé pour votre break en pleine nature en couple, en famille ou entre amis. 
+            </p>
+           
+
+        
+        </div>
+    </main>
+
+    <iframe src="../html/iframefooter.html" class="iframefooter"></iframe>
+
+    <script>
+        // Récupère la barre de navigation
+        const navbar = document.querySelector('.navbar');
+    
+
+        // Fonction pour gérer l'apparition/disparition
+        const handleScroll = () => {
+            if (window.scrollY > 50) { // Si l'utilisateur défile de plus de 50px
+                navbar.classList.add('visible');
+            } else if (window.scrollY <= 50 && event.clientY < 100) {
+                navbar.classList.add('visible');
+            } else { // Si l'utilisateur revient en haut
+                navbar.classList.remove('visible');
+            }
+        };
+    
+        // Ajoute un écouteur pour l'événement de défilement
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('mousemove', handleScroll);
+
+    </script>
+
+
+
+</body>
+</html>

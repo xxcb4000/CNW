@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automne</title>
+    <link rel="stylesheet" href="../css/balades.css">
+    <link rel="stylesheet" href="../css/calendarjs.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body class="bodyfall">
+    <header class="header">
+        <img src="../assets/fallintermediate.jpg" class="headerImg">
+        <h1> 
+            <i class="fas fa-map-marker-alt"></i> Manhay &#128992
+        </h1>
+
+        <h2>
+            <i class="fas fa-clock"></i> 2h |  <i class="fas fa-arrow-up"></i> 200m | <i class="fas fa-hiking"></i> jeunes adultes
+        </h2>
+        <p class="h2alt">
+            <strong><i class="fas fa-map-marker-alt"></i> Manhay &#128992</strong> <br><br> <i class="fas fa-clock"></i> 2h | <i class="fas fa-arrow-up"></i> 200m <br> <i class="fas fa-hiking"></i> jeunes adultes
+        </p>
+
+    </header>
+
+    <nav class="navbar">
+        <a href="../html/index.html">
+            <img src="../assets/bonhommewalk.png" alt="Logo bonhomme walk" class="logo">
+        </a>
+        
+        <ul>
+            <li><a href="../html/index.html"><img src="../assets/spring.png" alt="printemps" class="season"></a></li>
+            <li><a href="../html/summer.html"><img src="../assets/summer.png" alt="été" class="season"></a></li>
+            <li><a href="../html/fall.html"><img src="../assets/fallcircle.png" alt="automne" class="season"></a></li>
+            <li><a href="../html/winter.html"><img src="../assets/winter.png" alt="hiver" class="season"></a></li>
+        </ul>
+    </nav>
+
+    <main class="fall">
+        <div class="sousmenu">
+            Automne > Intermédiaire &#128992
+        </div>
+
+        <div class="mapLiege">
+            <div>
+                <img src="../assets/mapspringplusleft.png" alt="carte provinces Liège et Luxembourg" class="mapliegechild">
+            </div>
+            
+            <div class="paddingTelephone">
+                <h3><i class="fa-regular fa-compass"></i> &nbsp À quoi s'attendre ?</i></h3>
+                <p class="mapliegechild2">
+                    Nous vous invitons à une balade de 10km à Manhay pour aller à la rencontre du cerf, au cœur d’une des plus belles forêt des Ardennes. À une altitude de 500 mètres, prévoyez de vous habiller en fonction de la météo : un briefing complet vous sera envoyé quelques jours avant le départ pour vous préparer au mieux. Le parcours, soigneusement conçu par notre guide, est accessible à un public jeune adulte, avec un dénivelé modéré de 200 mètres. Après cette immersion dans une nature préservée, un moment de convivialité vous attend : un repas savoureux au Chalet du Pont de Belleheid, un lieu chaleureux offrant une vue imprenable sur les méandres de la Hoëgne. Pour toute question ou précision, n’hésitez pas à nous contacter ! 
+                </p>
+                <h3><i class="fas fa-clock"></i> &nbsp Déroulé de la journée</h3>
+                <p class="mapliegechild2">
+                    · Départ de Liège à 9h30 (boulevard d'Avroy) <br>
+                    · Transfert en car vers Manhay (11h) <br>
+                    · Durée de la balade : 2h <br>
+                    · Repas à la brasserie Chalet du Pont de Belleheid à 13h <br>
+                    · Retour à Liège vers 15h30
+                </p>
+                <h3><i class="fas fa-hiking"></i> &nbsp Matériel nécessaire</h3>
+                <p class="mapliegechild2">
+                    L'idéal est d'avoir des basket ou des chaussures de marche. Évitez en tous cas les chaussures de ville car nous emprunterons régulièrement des chemins et sentiers.
+                </p>
+            </div>
+        </div>
+
+        <div class="partenaire">
+            <div class="titre">
+                <p><br>Après l'effort, le réconfort.<br>
+                Notre brasserie partenaire <br>pour cette balade :<br><br><span class="emphase">Chalet du Pont de Belleheid <i class="fa-regular fa-registered"></i></span></p>
+            </div>
+
+            <div class="parentLogo">
+                <img src="https://www.pont-de-belleheid.be/wp-content/uploads/2019/12/Logo-Pont-Belleheid-blanc-04-1-e1577031894638.png" class="logoPeak">
+                <a href="https://www.pont-de-belleheid.be" target="_blank" class="peak">
+                <img src="https://www.pont-de-belleheid.be/wp-content/uploads/2019/10/Belle7-1024x683.jpg" >
+                </a>
+            </div>
+        </div>
+
+        <div class="gallery-container">
+            <button class="gallery-btn left" id="prev"></button>
+            <div class="gallery-mover">
+                <div class="gallery">
+    
+                </div>
+            </div>
+            <button class="gallery-btn right" id="next">></button>
+        </div>
+
+        <script src="../js/springeasy.js"></script>
+
+        <div class="sousmenu">
+            Prochaines sorties > Automne > Intermédiaire &#128992
+        </div>
+
+        <div class="calendriersconteneur">
+            <!-- point d'accroche de mon premier calendrier
+             calendrier1 c'est pour accrocher, calendrier c'est pour le css -->
+            <div class="calendrier1 calendrier"></div>
+            <!-- script de mon premier calendrier -->
+            <script src="../js/generateMonth.js"></script>
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier1',
+                    mois : 'Septembre' ,
+                    annee : '2025',
+                    jourFacile : 0,
+                    jourIntermediaire : 21,
+                    jourDifficile : 0
+                })
+            </script>
+
+            <div class="calendrier2 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier2',
+                    mois : 'Octobre' ,
+                    annee : '2025',
+                    jourFacile : 0,
+                    jourIntermediaire : 19,
+                    jourDifficile : 0
+                })
+            </script>
+
+            <div class="calendrier3 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier3',
+                    mois : 'Novembre' ,
+                    annee : '2025',
+                    jourFacile : 0,
+                    jourIntermediaire : 30,
+                    jourDifficile : 0
+                })
+            </script>
+        </div>
+
+        <div class="sousmenu">
+            Vous voulez tenter un autre niveau ?
+        </div>
+
+    
+
+        <iframe src="iframefallwalks.html" class="iframewalks"></iframe>      
+
+
+
+        <div>
+
+            <p class="titre">
+                Une journée dans les Ardennes aller-retour à partir du centre de Liège.
+            <p>
+            <p class ="textLiege">
+                Nous sommes des amoureux de notre région et, à chaque saison, nous sommes émerveillés par la beauté
+                de la nature qui nous entoure : baignade en été, brâme du cerf à l'automne, balade en raquettes en hiver,
+                randonnée sauvage au printemps... tout est possible, à seulement une heure de Liège. 
+                Bonhomme.walk vous propose une formule tout compris à partir du centre de Liège : voyage en car confort,
+                accompagnement par un guide professionnel, repas chaleureux dans une brasserie locale. Tout est 
+                organisé pour votre break en pleine nature en couple, en famille ou entre amis. 
+            </p>
+           
+
+        
+        </div>
+    </main>
+
+    <iframe src="../html/iframefooter.html" class="iframefooter"></iframe>
+
+    <script>
+        // Récupère la barre de navigation
+        const navbar = document.querySelector('.navbar');
+    
+
+        // Fonction pour gérer l'apparition/disparition
+        const handleScroll = () => {
+            if (window.scrollY > 50) { // Si l'utilisateur défile de plus de 50px
+                navbar.classList.add('visible');
+            } else if (window.scrollY <= 50 && event.clientY < 100) {
+                navbar.classList.add('visible');
+            } else { // Si l'utilisateur revient en haut
+                navbar.classList.remove('visible');
+            }
+        };
+    
+        // Ajoute un écouteur pour l'événement de défilement
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('mousemove', handleScroll);
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{SAISON}}</title>
+    <link rel="stylesheet" href="../css/balades.css">
+    <link rel="stylesheet" href="../css/calendarjs.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body class="{{BODY_SAISON}}">
+    <header class="header">
+        <img src="{{SAISONLEVELHEADER_URL}}" class="headerImg">
+        <h1> 
+            <i class="fas fa-map-marker-alt"></i> {{LOCATION_PASTILLE}}
+        </h1>
+
+        <h2>
+            <i class="fas fa-clock"></i> {{DURATION}} |  <i class="fas fa-arrow-up"></i> {{DENIVELE}} | <i class="fas fa-hiking"></i> {{FAMILYYESNO}}
+        </h2>
+        <p class="h2alt">
+            <strong><i class="fas fa-map-marker-alt"></i> {{LOCATION_PASTILLE}}</strong> <br><br> <i class="fas fa-clock"></i> {{DURATION}} | <i class="fas fa-arrow-up"></i> {{DENIVELE}} <br> <i class="fas fa-hiking"></i> {{FAMILYYESNO}}
+        </p>
+
+    </header>
+
+    <nav class="navbar">
+        <a href="../html/index.html">
+            <img src="../assets/bonhommewalk.png" alt="Logo bonhomme walk" class="logo">
+        </a>
+        
+        <ul>
+            <li><a href="../html/index.html"><img src="{{URL_ICONE_PRINTEMPS}}" alt="printemps" class="season"></a></li>
+            <li><a href="../html/summer.html"><img src="{{URL_ICONE_ETE}}" alt="été" class="season"></a></li>
+            <li><a href="../html/fall.html"><img src="{{URL_ICONE_AUTOMNE}}" alt="automne" class="season"></a></li>
+            <li><a href="../html/winter.html"><img src="{{URL_ICONE_HIVER}}" alt="hiver" class="season"></a></li>
+        </ul>
+    </nav>
+
+    <main class="{{SEASON}}">
+        <div class="sousmenu">
+            {{SAISON}} > {{LEVEL_PASTILLE}}
+        </div>
+
+        <div class="mapLiege">
+            <div>
+                <img src="{{IMAGE_MAP_URL}}" alt="carte provinces Liège et Luxembourg" class="mapliegechild">
+            </div>
+            
+            <div class="paddingTelephone">
+                <h3><i class="fa-regular fa-compass"></i> &nbsp À quoi s'attendre ?</i></h3>
+                <p class="mapliegechild2">
+                    {{DESCRIPTION_LONGUE}} 
+                </p>
+                <h3><i class="fas fa-clock"></i> &nbsp Déroulé de la journée</h3>
+                <p class="mapliegechild2">
+                    · Départ de Liège à {{HEURE_DEPART}} (boulevard d'Avroy) <br>
+                    · Transfert en car vers {{LOCATION}} ({{HEURE_SUR_PLACE}}) <br>
+                    · Durée de la balade : {{DURATION}} <br>
+                    · Repas à la brasserie {{NOM_PARTENAIRE}} à {{HEURE_PARTENAIRE}} <br>
+                    · Retour à Liège vers {{HEURE_RETOUR}}
+                </p>
+                <h3><i class="fas fa-hiking"></i> &nbsp Matériel nécessaire</h3>
+                <p class="mapliegechild2">
+                    {{DESCRIPTION_MATERIEL}}
+                </p>
+            </div>
+        </div>
+
+        <div class="partenaire">
+            <div class="titre">
+                <p><br>Après l'effort, le réconfort.<br>
+                Notre brasserie partenaire <br>pour cette balade :<br><br><span class="emphase">{{NOM_PARTENAIRE}} <i class="fa-regular fa-registered"></i></span></p>
+            </div>
+
+            <div class="parentLogo">
+                <img src="{{LOGO_PARTENAIRE_URL}}" class="logoPeak">
+                <a href="{{BRASSERIE_URL}}" target="_blank" class="peak">
+                <img src="{{IMAGE_BRASSERIE_URL}}" >
+                </a>
+            </div>
+        </div>
+
+        <div class="gallery-container">
+            <button class="gallery-btn left" id="prev"></button>
+            <div class="gallery-mover">
+                <div class="gallery">
+    
+                </div>
+            </div>
+            <button class="gallery-btn right" id="next">></button>
+        </div>
+
+        <script src="../js/springeasy.js"></script>
+
+        <div class="sousmenu">
+            Prochaines sorties > {{SAISON}} > {{LEVEL_PASTILLE}}
+        </div>
+
+        <div class="calendriersconteneur">
+            <!-- point d'accroche de mon premier calendrier
+             calendrier1 c'est pour accrocher, calendrier c'est pour le css -->
+            <div class="calendrier1 calendrier"></div>
+            <!-- script de mon premier calendrier -->
+            <script src="../js/generateMonth.js"></script>
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier1',
+                    mois : '{{MOIS_1}}' ,
+                    annee : '{{ANNEE}}',
+                    jourFacile : {{JOUR_FACILE_1}},
+                    jourIntermediaire : {{JOUR_INTERMEDIAIRE_1}},
+                    jourDifficile : {{JOUR_DIFFICILE_1}}
+                })
+            </script>
+
+            <div class="calendrier2 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier2',
+                    mois : '{{MOIS_2}}' ,
+                    annee : '{{ANNEE}}',
+                    jourFacile : {{JOUR_FACILE_2}},
+                    jourIntermediaire : {{JOUR_INTERMEDIAIRE_2}},
+                    jourDifficile : {{JOUR_DIFFICILE_2}}
+                })
+            </script>
+
+            <div class="calendrier3 calendrier"></div>
+
+            <script>
+                generateMonth({
+                    ClassDivConteneur : '.calendrier3',
+                    mois : '{{MOIS_3}}' ,
+                    annee : '{{ANNEE}}',
+                    jourFacile : {{JOUR_FACILE_3}},
+                    jourIntermediaire : {{JOUR_INTERMEDIAIRE_3}},
+                    jourDifficile : {{JOUR_DIFFICILE_3}}
+                })
+            </script>
+        </div>
+
+        <div class="sousmenu">
+            Vous voulez tenter un autre niveau ?
+        </div>
+
+    
+
+        <iframe src="{{IFRAME_SEASON_WALKS}}" class="iframewalks"></iframe>      
+
+
+
+        <div>
+
+            <p class="titre">
+                Une journée dans les Ardennes aller-retour à partir du centre de Liège.
+            <p>
+            <p class ="textLiege">
+                Nous sommes des amoureux de notre région et, à chaque saison, nous sommes émerveillés par la beauté
+                de la nature qui nous entoure : baignade en été, brâme du cerf à l'automne, balade en raquettes en hiver,
+                randonnée sauvage au printemps... tout est possible, à seulement une heure de Liège. 
+                Bonhomme.walk vous propose une formule tout compris à partir du centre de Liège : voyage en car confort,
+                accompagnement par un guide professionnel, repas chaleureux dans une brasserie locale. Tout est 
+                organisé pour votre break en pleine nature en couple, en famille ou entre amis. 
+            </p>
+           
+
+        
+        </div>
+    </main>
+
+    <iframe src="../html/iframefooter.html" class="iframefooter"></iframe>
+
+    <script>
+        // Récupère la barre de navigation
+        const navbar = document.querySelector('.navbar');
+    
+
+        // Fonction pour gérer l'apparition/disparition
+        const handleScroll = () => {
+            if (window.scrollY > 50) { // Si l'utilisateur défile de plus de 50px
+                navbar.classList.add('visible');
+            } else if (window.scrollY <= 50 && event.clientY < 100) {
+                navbar.classList.add('visible');
+            } else { // Si l'utilisateur revient en haut
+                navbar.classList.remove('visible');
+            }
+        };
+    
+        // Ajoute un écouteur pour l'événement de défilement
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('mousemove', handleScroll);
+
+    </script>
+
+
+
+</body>
+</html>

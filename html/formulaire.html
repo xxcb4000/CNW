@@ -71,7 +71,7 @@
                     <textarea id="message" name="message" rows="10" placeholder="Votre message" required></textarea>
 
                     <label for="consentement" class="thickboxconteneur">
-                        <input type="checkbox" name="news"> 
+                        <input type="checkbox" name="checkbox" id="news"> 
                         <span>Je souhaite être tenu au courant des développements futur du projet et marque mon accord pour être recontacté à cette fin exclusive et en conformité avec la Réglementation sur la Protection des Données personnelles (RGPD).</span>
                     </label>
 
@@ -119,7 +119,8 @@
 
     </script>
 
-    <script src="../js/mesoptions.js" defer></script>
-
+    <script src="../js/formulaire.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script> emailjs.init("sBVqInnstog63pxXc")</script>
 </body>
 </html>

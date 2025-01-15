@@ -151,9 +151,38 @@ body:has(main:target) nav {
     font-size : 30px;
 }
 @media (max-width:768px){
-    .titreconteneur h3{
+    .titreconteneur h2{
         text-align:center;
         width:100%;
+        font-size:30px;
+        padding:15px;
+    }
+}
+.titreconteneur h4{
+    text-align: justify;
+    width:800px;
+    margin: auto;
+}
+@media (max-width:768px){
+    .titreconteneur h4{
+
+        width:390px;
+        font-size:15px;
+        padding:15px;
+    }
+}
+.titreconteneur p{
+    text-align: justify;
+    width:800px;
+    margin: auto;
+}
+@media (max-width:768px){
+    .titreconteneur p{
+
+        width:390px;
+        font-size:15px;
+        font-weight: normal;
+        padding:15px;
     }
 }
 
@@ -183,6 +212,7 @@ body:has(main:target) nav {
     box-shadow : 2px 2px 10px rgba(0, 0, 0, 0.223);
     height : 400px;
     width : 300px;
+    margin: 0 0 50px;
 }
 @media (max-width:768px){
     .cadrewalk{
@@ -200,270 +230,6 @@ body:has(main:target) nav {
 }
 
 
-.baladeinfosconteneur {
-    position: relative;
-    bottom : 100px;
-    border-radius: 10px;
-    height:100px;
-    text-align:right;
-    padding: 20px;
-}
-.baladeinfos {
-    height: 80px;
-    width:100%;
-}
-.baladeinfos p {
-    position:absolute;
-    top:-290px;
-    right:15px;
-    font-size:30px;
-}
-.cheminvisuel1{
-    position : absolute;
-    bottom : -45px;
-    left:25px;
-    z-index: -1;
-    background-color: rgba(1, 92, 9, 0.269);
-    height:50px;
-    width: 250px;
-    display:block;
-}
-.cheminvisuel2{
-    position : absolute;
-    bottom : -45px;
-    left:25px;
-    z-index: -1;
-    background-color: rgba(1, 92, 9, 0.269);
-    height:50px;
-    width: 250px;
-    display:none;
-}
-.cheminvisuel3{
-    position : absolute;
-    bottom : -45px;
-    left:25px;
-    z-index: -1;
-    background-color: rgba(1, 92, 9, 0.269);
-    height:50px;
-    width: 250px;
-    display:none;
-}
-@media (max-width:768px) {
-    .cheminvisuel1 {
-        display:none !important;
-    }
-    .cheminvisuel2 {
-        display:none !important;
-    }
-    .cheminvisuel3 {
-        display:none !important;
-    }
-}
-
-.checkA {
-    display:block;
-}
-.checkB {
-    display:none;
-}
-.checkC {
-    display:none;
-}
-
-
-
-.inforeservationconteneur {
-    display:flex;
-    justify-content: center;
-    margin : 50px 0;
-    overflow: hidden;
-
-
-}
-
-
-.inforeservation {
-    z-index: 1;
-    box-shadow : 2px 2px 10px rgba(0, 0, 0, 0.146);
-    height : 450px;
-    width : 1200px;
-    /* background-color: hsl(0, 0%, 100%); */
-    display:grid ;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    /* color: #015c08dd; */
-    align-items:center;
-    font-size: 20px;
-    white-space:normal;
-
-}
-
-@media (max-width:768px) {
-    .inforeservation{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        height:1370px;
-        gap:20px;
-    }
-}
-
-.infoderoulement {
-    width:500px;
-    height:100%;
-    padding:20px 20px 10px 20px;
-
-    border-left: 1px solid white;
-}
-.smartphone {
-    display:none;
-}
-@media (max-width:768px) {
-    .infoderoulement{
-        display:none;
-
-    }
-    .smartphone{
-        display:block;
-        width:100%;
-        padding:20px;
-
-    }
-    .smartphone h3{
-        font-size:23px;
-    }
-}
-.infoderoulement h3 {
-    padding: 0 0 15px 0px;
-    width:100%;
-    
-}
-
-
-.descriptionbaladeconteneur {
-    height:100%;
-    display:flex;
-    align-items: center;
-
-}
-@media (max-width:768px){
-    .descriptionbaladeconteneur{
-        background-color: transparent;
-    }
-}
-
-
-.descriptionbalade {
-    width:370px; 
-    padding:0 25px;
-    text-align: justify;
-}
-@media (max-width:768px) {
-    .descriptionbalade {
-        width:100%;
-
-    }
-}
-
-#buttonDate1 {
-    width:330px;
-}
-#buttonDate2 {
-    width:330px;
-}
-#buttonDate3 {
-    width:330px;
-}
-
-@media (max-width:768px){
-    #buttonDate1 {
-        width:100%;
-    }
-    #buttonDate2 {
-        width:100%;
-    }
-    #buttonDate3 {
-        width:100%;
-    }
-}
-.datesconteneur {
-    width:330px;
-    height:100%;
-
-}
-
-@media (max-width:768px) {
-    .datesconteneur{
-        width:100%;
-        padding:0 40px;
-        background-color: transparent;
-    }
-}
-
-.date {
-    margin:5px 0 0 0;
-    height:140px;
-    border-bottom: 1px solid #ffffffdd;
-    border: 1px solid #ffffffdd;
-    position:relative;
-}
-
-
-.date p {
-    position:absolute;
-    top:33%;
-    left:16%;
-}
-@media (max-width:768px) {
-    .date{
-        height: 100px;
-    }
-    .date p{
-        top:25%;
-    }
-}
-
-.datechoosen.datechoosenspring  {
-    background-color: rgba(0, 68, 6, 0.248); 
-}
-.datechoosen.datechoosensummer  {
-    background-color: rgba(0, 41, 68, 0.242); 
-}
-.datechoosen.datechoosenfall  {
-    background-color: rgba(68, 0, 0, 0.217); 
-}
-.datechoosen.datechoosenwinter  {
-    background-color: rgba(0, 0, 68, 0.227); 
-}
-
-.date .check1 {
-    position:absolute;
-    left:288px;
-    top:58px;
-    display:block;
-}
-.date .check2 {
-    position:absolute;
-    left:288px;
-    top:58px;
-    display:none;
-}
-.date .check3 {
-    position:absolute;
-    left:288px;
-    top:58px;
-    display:none;
-}
-@media (max-width:768px) {
-    .date .check1 {
-        display:none !important;
-    }
-    .date .check2 {
-        display:none !important;
-    }
-    .date .check3 {
-        display:none !important;
-    }
-}
 .backgroundsaisonspring {
     background-color: rgba(0, 108, 31, 0.11);
 }
@@ -477,26 +243,83 @@ body:has(main:target) nav {
     background-color: rgba(10, 0, 97, 0.113);
 }
 
+form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size:20px;
+}
+
+
+label {
+    display: flex;
+    margin-bottom: 8px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type=checkbox] {
+    margin:4px 0 0 0px;;
+    width:30px;
+    transform: scale(1.4);
+}
+@media (max-width:768px) {
+    input[type=checkbox] {
+        transform: none;
+    }
+}
+
+span {
+    text-align: justify;
+    font-weight: normal;
+    padding-right: 5px;
+}
+
+
 .résumé {
     position:relative;
-    width:300px;
-    height:200px;
+    width:800px;
+    height:840px;
     text-align:center;
     background-color: rgba(255, 255, 255, 0.255);
     margin:0 auto 50px;
     padding: 15px 0;
     display:flex;
     flex-direction: column;
-    border-radius: 10px;;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .résumé h2{
     margin: 0 0 11px;
 }
+@media (max-width:768px) {
+    .résumé {
+        width:395px;
+        border-radius: 0;
+        height: 1020px;
+    }
+}
 .boutonconteneur {
     position:absolute;
-    bottom:-40px;
-    left:25px;;
+    bottom: -20px;
+    left:34%;
     margin : 0px 0px 60px;
+}
+@media (max-width:768px) {
+    .boutonconteneur{
+        left:20%;
+    }
 }
 
 .bouton {

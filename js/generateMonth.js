@@ -44,13 +44,12 @@ function generateMonth({ClassDivConteneur, mois, annee, jourFacile, jourIntermed
             break;
         case 'Juillet':
         case 'Août':
-        case 'Septembre':
             saison='summer';
             break;
+        case 'Septembre':
         case 'Octobre':
         case 'Novembre':
-        case 'Décembre':
-            saison='winter';
+            saison='fall';
             break;
 
 

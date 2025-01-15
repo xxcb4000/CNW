@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printemps</title>
+    <link rel="stylesheet" href="../css/formulaire.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bodyfall">
+    <header>
+        <nav class="navbarfall">
+            <a href="index.html">
+                <img src="../assets/bonhommewalk.png" alt="Logo Wallonie" class="logo">
+            </a>
+            
+            <ul>
+                <li><a href="index.html"><img src="../assets/spring.png" alt="printemps" class="season"></a></li>
+                <li><a href="summer.html"><img src="../assets/summer.png" alt="été" class="season"></a></li>
+                <li><a href="fall.html"><img src="../assets/fallcircle.png" alt="automne" class="season"></a></li>
+                <li><a href="winter.html"><img src="../assets/winter.png" alt="hiver" class="season"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <div class="titreconteneur">
+            <h2>
+                Wallonie.walk est un projet en construction
+            </h2>
+            <h4>
+                <br>Si vous êtes arrivé jusqu'ici, c'est que vous êtes peut-être intéressé
+                par une des expériences que nous avons sélectionné pour vous,
+                au coeur de nos Ardennes, au fil des saisons.
+            </h4>
+            <p>
+                <br>Si c'est le cas, nous vous invitons à remplir le formulaire ci-dessous. Les informations
+                enregistrées seront utilisées aux fins exclusives de la mise en oeuvre de ce projet. 
+                
+            </p>
+        </div>
+
+
+   
+
+
+
+
+
+
+
+            <div class="résumé">
+                <h1>
+                    Restons en contact
+                </h1>
+                <form action="envoiformulaire.js">
+                    <label for="nom">Prénom</label>
+                    <input type="text" id="prénom" name="prénom" placeholder="Votre prénom" required>
+
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                
+                    <label for="email">Adresse mail</label>
+                    <input type="email" id="email" name="email" placeholder="email@exemple.com" required>
+                
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="10" placeholder="Votre message" required></textarea>
+
+                    <label for="consentement" class="thickboxconteneur">
+                        <input type="checkbox" name="news"> 
+                        <span>Je souhaite être tenu au courant des développements futur du projet et marque mon accord pour être recontacté à cette fin exclusive et en conformité avec la Réglementation sur la Protection des Données personnelles (RGPD).</span>
+                    </label>
+
+
+                    <div class="boutonconteneur">
+                        <button type="submit" id="buttonValidate">
+                            <div class="bouton boutonfall">
+                                Envoyer le formulaire
+                            </div>
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+
+
+    
+
+    </main>
+
+    <iframe src="iframefooter.html" class="iframefooter"></iframe>
+
+    <script>
+        // Récupère la barre de navigation
+        const navbar = document.querySelector('nav');
+    
+
+        // Fonction pour gérer l'apparition/disparition
+        const handleScroll = () => {
+            if (window.scrollY > 50) { // Si l'utilisateur défile de plus de 50px
+                navbar.classList.add('visible');
+            } else if (window.scrollY <= 50 && event.clientY < 100) {
+                navbar.classList.add('visible');
+            } else { // Si l'utilisateur revient en haut
+                navbar.classList.remove('visible');
+            }
+        };
+    
+        // Ajoute un écouteur pour l'événement de défilement
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('mousemove', handleScroll);
+
+    </script>
+
+    <script src="../js/mesoptions.js" defer></script>
+
+</body>
+</html>

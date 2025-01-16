@@ -14,9 +14,7 @@
 
 
     buttonEasy.onclick = function onclickEasy() {
-        document.querySelector(".cheminvisuel1").style.display = "block";
-        document.querySelector(".cheminvisuel2").style.display = "none";
-        document.querySelector(".cheminvisuel3").style.display = "none";
+
         document.querySelectorAll(".checkA").forEach(elem => elem.style.display = "block");
         document.querySelectorAll(".checkB").forEach(elem => elem.style.display = "none");
         document.querySelectorAll(".checkC").forEach(elem => elem.style.display = "none");
@@ -25,9 +23,7 @@
         date3 = document.querySelector(".date3 .checkA").innerHTML;
     }
     buttonIntermediate.onclick = function onclickIntermadiate() {
-        document.querySelector(".cheminvisuel1").style.display = "none";
-        document.querySelector(".cheminvisuel2").style.display = "block";
-        document.querySelector(".cheminvisuel3").style.display = "none";
+
         document.querySelectorAll(".checkA").forEach(elem => elem.style.display = "none");
         document.querySelectorAll(".checkB").forEach(elem => elem.style.display = "block");
         document.querySelectorAll(".checkC").forEach(elem => elem.style.display = "none");
@@ -36,9 +32,7 @@
         date3 = document.querySelector(".date3 .checkB").innerHTML;
     }
     buttonHard.onclick = function onclickHard() {
-        document.querySelector(".cheminvisuel1").style.display = "none";
-        document.querySelector(".cheminvisuel2").style.display = "none";
-        document.querySelector(".cheminvisuel3").style.display = "block";
+
         document.querySelectorAll(".checkA").forEach(elem => elem.style.display = "none");
         document.querySelectorAll(".checkB").forEach(elem => elem.style.display = "none");
         document.querySelectorAll(".checkC").forEach(elem => elem.style.display = "block");

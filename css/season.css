@@ -227,6 +227,7 @@ main {
     padding: 4vh 5vw ;
     font-size: 2vw;
     text-align:left;
+    background-color: rgba(255, 255, 255, 0.149);
 }
 @media (max-width: 768px) {
     .texte {
@@ -300,3 +301,6 @@ main {
 .bodywinter .iframefooter {
     background-color: rgba(26, 28, 81, 0.909);
 }
+
+
+

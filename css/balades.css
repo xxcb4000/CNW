@@ -36,6 +36,12 @@ h1 {
     right:80px;
     font-size:50px;
 }
+.audessus{
+    position:absolute;
+    bottom:160px;
+    right:80px;
+    font-size:50px;
+}
 .h1alt {
     position:absolute;
     bottom:50%;
@@ -62,7 +68,7 @@ h2 {
 .h2alt {
     width:100%;
     position:absolute;
-    bottom:20%;
+    bottom:10%;
     font-size:3vh;;  
     display:none;
     right:0px;
@@ -260,6 +266,7 @@ body:has(main:target) .navbar {
     max-width:100vw;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
+    margin: 20px 0 0 0;
     padding: 0px 0px 50px;
     align-items: center;
 
@@ -326,19 +333,7 @@ h3 {
     }
 }
 
-.galeriephotos {
-    position:relative;
-    left:-5vw;
-    height: 350px;
-    width: 110vw;
-    padding: 0 0 0 5vw;
-    margin: 10px 0 0 0;
-    background: rgba(0, 37, 10,0.8);
-    box-shadow: 
-    inset 0 10px 15px  rgba(0, 0, 0, 0.8),
-    inset 0 -10px 15px  rgb(0, 0, 0, 0.8) ;
 
-}
 
 
 .soustitres {
@@ -460,16 +455,7 @@ h3 {
 }
 
 
-/* Galerie principale */
-.gallery-container {
-    width: 100%; /* Ajuste la largeur selon le besoin */
-    height: 240px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.295);
 
-}
 
 
 button {
@@ -489,22 +475,27 @@ button {
 }
 
 .gallery-mover {
+    display:flex;
+    overflow-x: scroll;
     transition: 0.5s ease-in-out;
     will-change: transform;
-
+    background-color: rgba(129, 0, 0, 0.217);
+    height: 330px;
+    margin: 0 0 20px 0;
 
 }
 .gallery {
+    align-items: center;
     display:flex;
-
 }
 
 .gallery img {
+
     display:block;
-    height:200px;
-    width:300px;
+    height:300px;
+    width:400px;
     object-fit:cover;
-    margin-right:15px;
+    margin-right: 15px;
     border-radius: 10px;
     box-shadow: 1px 1px 15px  rgba(0, 0, 0, 0.8) ;
 }
@@ -533,4 +524,6 @@ body.bodyfall .iframefooter {
 body.bodywinter .iframefooter {
     background-color: rgba(26, 28, 81, 0.909);/* Fond sombre professionnel */;
 }
+
+
 

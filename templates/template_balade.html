@@ -12,8 +12,11 @@
 <body class="{{BODY_SAISON}}">
     <header class="header">
         <img src="{{SAISONLEVELHEADER_URL}}" class="headerImg">
+        <h1 class="audessus"> 
+            {{NOM_WALK_PASTILLE}}
+        </h1>
         <h1> 
-            <i class="fas fa-map-marker-alt"></i> {{LOCATION_PASTILLE}}
+            à {{LOCATION}} 
         </h1>
 
         <h2>
@@ -39,9 +42,7 @@
     </nav>
 
     <main class="{{SEASON}}">
-        <div class="sousmenu">
-            {{SAISON}} > {{LEVEL_PASTILLE}}
-        </div>
+
 
         <div class="mapLiege">
             <div>
@@ -82,20 +83,19 @@
             </div>
         </div>
 
-        <div class="gallery-container">
-            <button class="gallery-btn left" id="prev"></button>
-            <div class="gallery-mover">
-                <div class="gallery">
-    
-                </div>
+        <div class="gallery-mover">
+            <div class="gallery">
+                <img src="{{URL_IMAGE1}}">
+                <img src="{{URL_IMAGE2}}">
+                <img src="{{URL_IMAGE3}}">
+                <img src="{{URL_IMAGE4}}">
+                <img src="{{URL_IMAGE5}}">
+                <img src="{{URL_IMAGE6}}">
             </div>
-            <button class="gallery-btn right" id="next">></button>
         </div>
 
-        <script src="../js/springeasy.js"></script>
-
         <div class="sousmenu">
-            Prochaines sorties > {{SAISON}} > {{LEVEL_PASTILLE}}
+            {{NOM_WALK_PASTILLE}} : prochaines dates
         </div>
 
         <div class="calendriersconteneur">
@@ -143,7 +143,7 @@
         </div>
 
         <div class="sousmenu">
-            Vous voulez tenter un autre niveau ?
+            Vous voulez tenter une autre expérience ?
         </div>
 
     
@@ -194,6 +194,7 @@
         window.addEventListener('mousemove', handleScroll);
 
     </script>
+
 
 
 

@@ -160,8 +160,7 @@ body:has(main:target) nav {
 .walksconteneur {
     display:flex;
     justify-content: center;
-    overflow-x: scroll;
-    overflow-y: hidden;
+
     gap: 70px;
 
 
@@ -169,18 +168,31 @@ body:has(main:target) nav {
 @media (max-width:768px){
     .walksconteneur{
         gap:0px;
-        background-color: rgba(1, 92, 9, 0.269);
         height:170px;
         width:100%;
         margin : 0;
         padding: 0 30px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .walksconteneurbgfall {
+        background-color: rgba(92, 1, 1, 0.269);
+    }
+    .walksconteneurbgwinter {
+        background-color: rgba(6, 1, 92, 0.269);
+    }
+    .walksconteneurbgspring {
+        background-color: rgba(1, 92, 9, 0.269);
+    }
+    .walksconteneurbgsummer {
+        background-color: rgba(1, 48, 92, 0.269);
     }
 }
 
 .cadrewalk {
     position:relative;
     border-radius: 10px;
-    box-shadow : 2px 2px 10px rgba(0, 0, 0, 0.223);
+    box-shadow : 2px 2px 20px rgba(0, 0, 0, 0.723);
     height : 400px;
     width : 300px;
 }
@@ -197,12 +209,23 @@ body:has(main:target) nav {
     width:100%;
     border-radius: 10px;
 
+
+}
+.cadrewalk:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+    cursor:pointer;
+}
+.cadrewalk img:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+    cursor:pointer;
 }
 
 
 .baladeinfosconteneur {
     position: relative;
-    bottom : 100px;
+    bottom : 120px;
     border-radius: 10px;
     height:100px;
     text-align:right;
@@ -214,51 +237,11 @@ body:has(main:target) nav {
 }
 .baladeinfos p {
     position:absolute;
-    top:-290px;
+    top:-270px;
     right:15px;
     font-size:30px;
 }
-.cheminvisuel1{
-    position : absolute;
-    bottom : -45px;
-    left:25px;
-    z-index: -1;
-    background-color: rgba(1, 92, 9, 0.269);
-    height:50px;
-    width: 250px;
-    display:block;
-}
-.cheminvisuel2{
-    position : absolute;
-    bottom : -45px;
-    left:25px;
-    z-index: -1;
-    background-color: rgba(1, 92, 9, 0.269);
-    height:50px;
-    width: 250px;
-    display:none;
-}
-.cheminvisuel3{
-    position : absolute;
-    bottom : -45px;
-    left:25px;
-    z-index: -1;
-    background-color: rgba(1, 92, 9, 0.269);
-    height:50px;
-    width: 250px;
-    display:none;
-}
-@media (max-width:768px) {
-    .cheminvisuel1 {
-        display:none !important;
-    }
-    .cheminvisuel2 {
-        display:none !important;
-    }
-    .cheminvisuel3 {
-        display:none !important;
-    }
-}
+
 
 .checkA {
     display:block;
@@ -391,13 +374,7 @@ body:has(main:target) nav {
 
 }
 
-@media (max-width:768px) {
-    .datesconteneur{
-        width:100%;
-        padding:0 40px;
-        background-color: transparent;
-    }
-}
+
 
 .date {
     margin:5px 0 0 0;
@@ -405,52 +382,70 @@ body:has(main:target) nav {
     border-bottom: 1px solid #ffffffdd;
     border: 1px solid #ffffffdd;
     position:relative;
+    border-radius:5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.702);
 }
-
+.date:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+    cursor:pointer;
+}
+@media (max-width:768px) {
+    .datesconteneur{
+        width:100%;
+        padding:0 40px;
+        background-color: transparent;
+        height:110%;
+    }
+    .date {
+        box-shadow: none;
+    }
+}
 
 .date p {
     position:absolute;
-    top:33%;
+    top:44%;
     left:16%;
 }
 @media (max-width:768px) {
     .date{
         height: 100px;
     }
-    .date p{
-        top:25%;
-    }
 }
 
 .datechoosen.datechoosenspring  {
     background-color: rgba(0, 68, 6, 0.248); 
+    transition: background-color 0.2s ease;
 }
 .datechoosen.datechoosensummer  {
     background-color: rgba(0, 41, 68, 0.242); 
+    transition: background-color 0.2s ease;
 }
 .datechoosen.datechoosenfall  {
     background-color: rgba(68, 0, 0, 0.217); 
+    transition: background-color 0.2s ease;
 }
 .datechoosen.datechoosenwinter  {
     background-color: rgba(0, 0, 68, 0.227); 
+    transition: background-color 0.2s ease;
 }
 
 .date .check1 {
     position:absolute;
     left:288px;
-    top:58px;
+    top:55px;
     display:block;
 }
 .date .check2 {
     position:absolute;
     left:288px;
-    top:58px;
+    top:55px;
     display:none;
 }
 .date .check3 {
     position:absolute;
     left:288px;
-    top:58px;
+    top:55px;
     display:none;
 }
 @media (max-width:768px) {
@@ -476,10 +471,27 @@ body:has(main:target) nav {
 .backgroundsaisonwinter {
     background-color: rgba(10, 0, 97, 0.113);
 }
+@media (max-width:768px) {
+    .backgroundsaisonspring {
+        background-color: transparent;
+    }
+    .backgroundsaisonsummer {
+        background-color: transparent;
+    }
+    .backgroundsaisonfall {
+        background-color: transparent;
+    }
+    .backgroundsaisonwinter {
+        background-color: transparent;
+    }
+    .smartphone{
+        background-color: rgba(146, 0, 0, 0.109);
+    }
+}
 
 .résumé {
     position:relative;
-    width:300px;
+    width:320px;
     height:200px;
     text-align:center;
     background-color: rgba(255, 255, 255, 0.255);
@@ -490,12 +502,12 @@ body:has(main:target) nav {
     border-radius: 10px;;
 }
 .résumé h2{
-    margin: 0 0 11px;
+    margin: 0 0 24px;
 }
 .boutonconteneur {
     position:absolute;
     bottom:-40px;
-    left:25px;;
+    left:34px;;
     margin : 0px 0px 60px;
 }
 
@@ -510,16 +522,44 @@ body:has(main:target) nav {
     font-size: 20px;
 }
 .boutonspring {
-    background-color: #015c08dd;
+    background-color: #3c9c44dd;
 }
 .boutonsummer {
-    background-color: #013b5cdd;
+    background-color: #538aa9dd;
 }
 .boutonfall {
-    background-color: #5c0101dd;
+    background-color: #944343dd;
 }
 .boutonwinter {
+    background-color: #4a4f99dd;
+}
+.boutonspring:hover {
+    background-color: #015c08dd;
+    cursor: pointer;
+    transform:scale(1.03);
+    transition: transform 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+.boutonsummer:hover {
+    background-color: #013b5cdd;
+    cursor: pointer;
+    transform:scale(1.03);
+    transition: transform 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+.boutonfall:hover {
+    background-color: #5c0101dd;
+    cursor: pointer;
+    transform:scale(1.03);
+    transition: transform 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+.boutonwinter:hover {
     background-color: #01075cdd;
+    cursor: pointer;
+    transform:scale(1.03);
+    transition: transform 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 @media (max-width:768px){
@@ -564,3 +604,7 @@ body:has(main:target) nav {
 .bodywinter .iframefooter {
     background-color: rgba(26, 28, 81, 0.909);
 }
+
+
+
+

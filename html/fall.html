@@ -42,7 +42,7 @@
             <div class="background">
                 <img src="../assets/fallbackground.jpg">
             </div>
-            <p class="titre">
+            <p class="titre text splitting" data-splitting="words">
                 Balade dans les Ardennes aller-retour à partir de Liège.
             </p>
 
@@ -60,14 +60,14 @@
 
         <div>
 
-            <p class="titre"> 
+            <p class="titre text splitting" data-splitting="words"> 
                 Choisissez votre niveau,<br>préparez votre matériel,<br>on s'occupe du reste. 
             </p>
 
         </div>
         <iframe src="iframefallwalks.html" class="iframewalks"></iframe>
     
-        <div class ="texte">
+        <div class ="texte text splitting" data-splitting="words">
             <p>
                 À chaque saison, nous vous proposons trois balades en fonction de votre niveau : <br>
                 &nbsp · le niveau &#128994 facile s'adresse à toute la famille, dès 7 ans ;<br>
@@ -146,6 +146,36 @@
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('mousemove', handleScroll);
 
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/splitting/dist/splitting.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialise Splitting.js
+            Splitting();
+
+            // Configure Intersection Observer
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px', // Pas de marge autour du viewport
+                threshold: 0.3, // L'élément doit être à au moins 10% visible
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        // Stop observing once it's visible
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Cible tous les éléments avec la classe .text
+            const textElements = document.querySelectorAll('.text');
+            textElements.forEach((el) => observer.observe(el));
+        });
     </script>
 
 </body>

@@ -499,6 +499,15 @@ button {
     border-radius: 10px;
     box-shadow: 1px 1px 15px  rgba(0, 0, 0, 0.8) ;
 }
+@media (max-width:768px) {
+    .gallery img {
+        height:200px;
+        width:300px;
+    }
+    .gallery-mover{
+        height:230px;
+    }
+}
 
 .iframefooter {
     width:100%;

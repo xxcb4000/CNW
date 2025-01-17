@@ -393,9 +393,9 @@ body:has(main:target) nav {
 @media (max-width:768px) {
     .datesconteneur{
         width:100%;
-        padding:0 40px;
+        padding:20px 40px 0;
         background-color: transparent;
-        height:110%;
+        height:100%;
     }
     .date {
         box-shadow: none;

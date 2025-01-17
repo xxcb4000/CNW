@@ -232,7 +232,7 @@ main {
 @media (max-width: 768px) {
     .texte {
         color: white ;
-        padding: 0vh 5vw 5vh ;
+        padding: 5vh 5vw ;
         font-size: 2.5vh;
         text-align:justify;
     }

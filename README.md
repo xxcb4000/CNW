@@ -3,6 +3,7 @@ Le calendrier (qui est une usine à gaz sur laquelle je devrais revenir par la s
 J'ai également dévloppé un petit serveur flask, et les 12 pages html de balade sont générées automatiquement par un script python
 destiné à tourner en back end qui s'appuie sur les balises {{}} du template html et va chercher les infos dans une liste
 de dictionnaires json. 
+Le site web est visitable sur GitHub Page : https://xxcb4000.github.io/CNW/
 Le reste c'est du html et du css. Je ne suis pas mécontent du résultat visuel. 
 Attention, toutes les infos sont donc utilisées uniquement pour l'exercice de création d'un site web. 
 
